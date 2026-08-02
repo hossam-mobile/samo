@@ -181,53 +181,182 @@
       <h2 class="section-title" data-i18n="work.title" data-aos="fade-up">Our Work</h2>
       <p class="section-subtitle" data-i18n="work.subtitle" data-aos="fade-up">Real projects, real results.</p>
 
-      <div class="work-featured" data-aos="fade-up">
-        <div class="work-mockup">
-          <div class="browser">
-            <div class="browser-bar"><span></span><span></span><span></span></div>
-            <div class="browser-screen" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+      <div class="work-featured-row" data-aos="fade-up">
+        <!-- Featured Spotlight: Elite Royal -->
+        <div class="work-card-featured">
+          <div class="work-card-header">
+            <div class="work-card-badges">
+              <span class="badge badge-primary" data-i18n="work.project1_badge1">Featured Spotlight</span>
+              <span class="badge badge-outline" data-i18n="work.project1_badge2">Backend Development</span>
+            </div>
+            <div class="work-card-links">
+              <a href="#" class="work-link-icon" aria-label="External Link"><i data-lucide="external-link"></i></a>
+              <a href="#" class="work-link-icon" aria-label="GitHub"><i data-lucide="github"></i></a>
+            </div>
+          </div>
+          
+          <h3 class="work-card-title" data-i18n="work.project1_title">Elite Royal - On-Demand Home Services Platform</h3>
+          <p class="work-card-desc" data-i18n="work.project1_desc">Engineered the backend architecture for an on-demand laundry & cleaning services platform. Implemented comprehensive workflow automation for pickup, active processing, and delivery cycles leveraging n8n orchestration.</p>
+          
+          <!-- Mockup Visual Area -->
+          <div class="work-mockup-wrapper">
+            <div class="laptop-mockup">
+              <div class="laptop-screen">
+                <div class="laptop-content">
+                  <div class="app-ui">
+                    <div class="app-hero">
+                      <h4 class="app-title-ar">كل قطعة تستحق عناية حقيقية</h4>
+                      <p class="app-subtitle-ar">غسيل ملابس، سجاد، مفروشات وستائر — احجز من جوالك واشتر موعد الاستلام</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="laptop-base"></div>
+            </div>
+            
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="phone-content">
+                  <div class="phone-app-ui">
+                    <div class="phone-header">
+                      <span class="phone-dot"></span>
+                      <span class="phone-title">Elite Royal</span>
+                    </div>
+                    <div class="phone-hero">
+                      <h5 class="phone-title-ar">كل قطعة تستحق عناية</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="work-card-footer">
+            <div class="work-card-tags">
+              <span class="work-tag">Laravel</span>
+              <span class="work-tag">n8n</span>
+              <span class="work-tag">Node.js</span>
+              <span class="work-tag">MySQL</span>
+              <span class="work-tag">REST API</span>
+              <span class="work-tag">+1</span>
+            </div>
+            <a href="#" class="btn-explore">
+              <span data-i18n="work.explore">Explore Project</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
           </div>
         </div>
-        <div class="work-featured-info">
-          <span class="badge" data-i18n="work.badge1">Featured</span>
-          <h3 data-i18n="work.project1_title">Fintech Dashboard</h3>
-          <p data-i18n="work.project1_desc">Real-time analytics platform handling $2B+ in transactions monthly. Built
-            with React and Node.js.</p>
-          <div class="work-tags"><span class="work-tag">React</span><span class="work-tag">Node.js</span><span
-              class="work-tag">TypeScript</span></div>
-          <a href="#" class="btn" data-i18n="work.case_study">View Case Study</a>
+
+        <!-- Card 2: Sanay3ya Baladna -->
+        <div class="work-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="work-card-media" style="background: linear-gradient(135deg, #396C54, #2E5A44);">
+            <div class="media-overlay">
+              <span class="media-badge" data-i18n="work.project2_badge">Web Development</span>
+            </div>
+            <div class="mock-ui">
+              <div class="mock-craftsmen">
+                <div class="craftsman-header">صنايعية بلدنا</div>
+                <div class="craftsman-row">
+                  <div class="craftsman-avatar">ص</div>
+                  <div class="craftsman-text">
+                    <div class="craftsman-name">أبو أحمد الكهربائي</div>
+                    <div class="craftsman-rating">★★★★★</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card-body">
+            <h3 class="work-card-title-small" data-i18n="work.project2_title">Sanay3ya Baladna - صنايعية بلدنا</h3>
+            <p class="work-card-desc-small" data-i18n="work.project2_desc">Sanay3ya Baladna is a modern full-stack marketplace for local craftsmen and home service providers, simplifying service booking and communication.</p>
+            <div class="work-card-footer-small">
+              <div class="work-card-tags">
+                <span class="work-tag">Laravel</span>
+                <span class="work-tag">Next.js</span>
+                <span class="work-tag">REST API</span>
+              </div>
+              <a href="#" class="btn-arrow" aria-label="View Project"><i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="work-grid">
+      <!-- Row 2: Grid of remaining cards -->
+      <div class="work-row-grid">
+        <!-- Card 3: Ham Ham Restaurant -->
         <div class="work-card" data-aos="fade-up" data-aos-delay="50">
-          <div class="work-mockup">
-            <div class="browser">
-              <div class="browser-bar"><span></span><span></span><span></span></div>
-              <div class="browser-screen" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+          <div class="work-card-media" style="background: linear-gradient(135deg, #CF755A, #B85E45);">
+            <div class="media-overlay">
+              <span class="media-badge" data-i18n="work.project3_badge">Full Stack</span>
+            </div>
+            <div class="mock-ui food-mock">
+              <div class="food-plate">
+                <div class="food-item">🍔</div>
+                <div class="food-text">مطعم هم هم</div>
+              </div>
             </div>
           </div>
-          <div class="work-info">
-            <span class="badge" data-i18n="work.badge2">Latest</span>
-            <h3 data-i18n="work.project2_title">E-Commerce Platform</h3>
-            <p data-i18n="work.project2_desc">Full-featured online store generating 10K+ daily orders with custom CMS
-              and Stripe integration.</p>
-            <div class="work-tags"><span class="work-tag">Next.js</span><span class="work-tag">Stripe</span></div>
+          <div class="work-card-body">
+            <h3 class="work-card-title-small" data-i18n="work.project3_title">Ham Ham Restaurant Ordering</h3>
+            <p class="work-card-desc-small" data-i18n="work.project3_desc">Engineered backend systems for a restaurant ordering platform supporting real-time order tracking, menu management, and multi-branch operations.</p>
+            <div class="work-card-footer-small">
+              <div class="work-card-tags">
+                <span class="work-tag">Laravel</span>
+                <span class="work-tag">Node.js</span>
+                <span class="work-tag">Redis</span>
+              </div>
+              <a href="#" class="btn-arrow" aria-label="View Project"><i data-lucide="arrow-right"></i></a>
+            </div>
           </div>
         </div>
+
+        <!-- Card 4: 4AURA -->
         <div class="work-card" data-aos="fade-up" data-aos-delay="150">
-          <div class="work-mockup">
-            <div class="browser">
-              <div class="browser-bar"><span></span><span></span><span></span></div>
-              <div class="browser-screen" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+          <div class="work-card-media" style="background: linear-gradient(135deg, #D8D5BF, #AEC1BA);">
+            <div class="media-overlay">
+              <span class="media-badge" data-i18n="work.project4_badge">Web Development</span>
+            </div>
+            <div class="mock-ui luxury-mock">
+              <div class="luxury-logo">4AURA</div>
+              <div class="luxury-title-ar">الوجه السعودي الرائد</div>
             </div>
           </div>
-          <div class="work-info">
-            <span class="badge" data-i18n="work.badge3">Client Favorite</span>
-            <h3 data-i18n="work.project3_title">Health App</h3>
-            <p data-i18n="work.project3_desc">Cross-platform mobile app serving 50K+ patients with appointment
-              management and telemedicine.</p>
-            <div class="work-tags"><span class="work-tag">Flutter</span><span class="work-tag">Firebase</span></div>
+          <div class="work-card-body">
+            <h3 class="work-card-title-small" data-i18n="work.project4_title">4AURA</h3>
+            <p class="work-card-desc-small" data-i18n="work.project4_desc">Developed backend for a corporate landing page focused on protocol and event management, delivering high performance and seamless integrations.</p>
+            <div class="work-card-footer-small">
+              <div class="work-card-tags">
+                <span class="work-tag">Laravel</span>
+                <span class="work-tag">Next.js</span>
+                <span class="work-tag">REST API</span>
+              </div>
+              <a href="#" class="btn-arrow" aria-label="View Project"><i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Extra Pharma -->
+        <div class="work-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="work-card-media" style="background: linear-gradient(135deg, #396C54, #CF755A);">
+            <div class="media-overlay">
+              <span class="media-badge" data-i18n="work.project5_badge">Backend Development</span>
+            </div>
+            <div class="mock-ui pharma-mock">
+              <div class="pharma-badge">+ Extra Pharma</div>
+              <div class="pharma-text">Wir bringen die richtigen Menschen zusammen.</div>
+            </div>
+          </div>
+          <div class="work-card-body">
+            <h3 class="work-card-title-small" data-i18n="work.project5_title">Extra Pharma - Healthcare Staffing</h3>
+            <p class="work-card-desc-small" data-i18n="work.project5_desc">Designed robust backend architecture for a healthcare staffing platform, reducing database query latency and improving clinician scheduling efficiency.</p>
+            <div class="work-card-footer-small">
+              <div class="work-card-tags">
+                <span class="work-tag">Laravel</span>
+                <span class="work-tag">PHP</span>
+                <span class="work-tag">MySQL</span>
+              </div>
+              <a href="#" class="btn-arrow" aria-label="View Project"><i data-lucide="arrow-right"></i></a>
+            </div>
           </div>
         </div>
       </div>
