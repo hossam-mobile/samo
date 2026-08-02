@@ -957,6 +957,7 @@ section+section {
 
 .cta-box .btn {
   display: inline-flex;
+  box-shadow: 0 4px 24px rgba(57, 108, 84, 0.25);
 }
 
 /* Contact */
