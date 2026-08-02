@@ -370,16 +370,16 @@ h4 {
 
 .btn:hover {
   background: var(--accent-hover);
-  box-shadow: 0 8px 32px rgba(207, 117, 90, 0.3);
+  box-shadow: 0 8px 32px rgba(57, 108, 84, 0.3);
   transform: translateY(-1px);
 }
 
 .hero-buttons .btn:first-child {
-  box-shadow: 0 4px 24px rgba(207, 117, 90, 0.25);
+  box-shadow: 0 4px 24px rgba(57, 108, 84, 0.25);
 }
 
 .hero-buttons .btn:first-child:hover {
-  box-shadow: 0 8px 40px rgba(207, 117, 90, 0.4);
+  box-shadow: 0 8px 40px rgba(57, 108, 84, 0.4);
 }
 
 .hero-trust {
@@ -518,7 +518,7 @@ section+section {
 .about-card:hover {
   border-color: var(--secondary-border);
   transform: translateY(-6px);
-  box-shadow: 0 20px 48px var(--secondary-glow);
+  box-shadow: 0 20px 48px #D8D5BF;
 }
 
 .about-card h3 {
@@ -598,7 +598,7 @@ section+section {
 .service-card:hover {
   border-color: var(--secondary-border);
   transform: translateY(-6px);
-  box-shadow: 0 20px 48px var(--secondary-glow);
+  box-shadow: 0 20px 48px #D8D5BF;
 }
 
 .service-icon {
@@ -648,7 +648,7 @@ section+section {
 }
 
 .work-featured:hover {
-  box-shadow: 0 20px 60px rgba(26, 29, 26, 0.08);
+  box-shadow: 0 20px 60px #D8D5BF;
 }
 
 .work-mockup {
@@ -755,7 +755,7 @@ section+section {
 .work-card:hover {
   border-color: var(--secondary-border);
   transform: translateY(-6px);
-  box-shadow: 0 20px 48px var(--secondary-glow);
+  box-shadow: 0 20px 48px #D8D5BF;
 }
 
 .work-card .browser-screen {
@@ -837,7 +837,7 @@ section+section {
 .testimonial-card:hover {
   border-color: var(--secondary-border);
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px var(--secondary-glow);
+  box-shadow: 0 12px 32px #D8D5BF;
 }
 
 .testimonial-text {
