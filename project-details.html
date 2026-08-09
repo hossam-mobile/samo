@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details | SAMO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700,800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><img src="assets/Group 310.svg" alt="SAMO"></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="index.html#work" data-i18n="nav.work">Work</a></li>
+        <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language"><svg viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg><span id="langText">AR</span></button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="project-hero" id="projectHero">
+    <div class="project-hero-blob"></div>
+    <div class="container project-hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html" data-i18n="breadcrumb.home">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="index.html#work" data-i18n="breadcrumb.work">Work</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="current" id="breadcrumbCurrent">Elite Royal</span>
+      </nav>
+
+      <span class="hero-eyebrow" id="heroBadge">Featured Project</span>
+      <h1 id="projectTitle">Elite Royal</h1>
+      <p class="hero-subtitle" id="projectSubtitle">On-demand laundry & home services platform with fully automated
+        order lifecycle management, real-time tracking, and seamless multi-channel delivery.</p>
+
+      <div class="project-hero-badges" id="heroBadges"></div>
+
+      <div class="project-hero-actions">
+        <a href="#" class="btn" data-i18n="hero.live">Visit Live Site</a>
+        <a href="#" class="btn btn-outline" data-i18n="hero.github">View Source</a>
+        <a href="#" class="btn btn-outline btn-behance">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-2.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
+          </svg>
+          <span data-i18n="hero.behance">Behance</span>
+        </a>
+      </div>
+
+      <div class="detail-laptop-mockup" data-aos="fade-up">
+        <div class="detail-laptop-screen">
+          <div class="detail-app-ui">
+            <div class="detail-app-sidebar">
+              <span class="detail-side-logo"></span>
+              <span class="detail-side-item"></span>
+              <span class="detail-side-item"></span>
+              <span class="detail-side-item"></span>
+              <span class="detail-side-item"></span>
+            </div>
+            <div class="detail-app-main">
+              <div class="detail-topbar">
+                <span class="detail-top-title" id="mockTitle">Elite Royal</span>
+                <span class="detail-top-badge">Live</span>
+              </div>
+              <div class="detail-stat-row">
+                <div class="detail-stat">
+                  <span class="detail-stat-value">1,248</span>
+                  <span class="detail-stat-label">Orders / Week</span>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat-value">97%</span>
+                  <span class="detail-stat-label">On-time</span>
+                </div>
+                <div class="detail-stat">
+                  <span class="detail-stat-value">4.9</span>
+                  <span class="detail-stat-label">Rating</span>
+                </div>
+              </div>
+              <div class="detail-order-row">
+                <span class="detail-order-id">#ER-4821</span>
+                <span class="detail-order-status" style="background: rgba(57,108,84,0.25);">Pickup</span>
+                <span class="detail-order-time">2:15 PM</span>
+              </div>
+              <div class="detail-order-row">
+                <span class="detail-order-id">#ER-4820</span>
+                <span class="detail-order-status" style="background: rgba(207,117,90,0.25);">Processing</span>
+                <span class="detail-order-time">1:40 PM</span>
+              </div>
+              <div class="detail-order-row">
+                <span class="detail-order-id">#ER-4819</span>
+                <span class="detail-order-status" style="background: rgba(57,108,84,0.25);">Delivery</span>
+                <span class="detail-order-time">12:58 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="laptop-base"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="project-meta">
+    <div class="container">
+      <div class="project-meta-grid">
+        <div class="project-meta-item" data-aos="fade-up">
+          <i data-lucide="calendar-days"></i>
+          <strong data-meta="v1">8</strong>
+          <span data-meta="l1">Months</span>
+        </div>
+        <div class="project-meta-item" data-aos="fade-up" data-aos-delay="100">
+          <i data-lucide="users"></i>
+          <strong data-meta="v2">5</strong>
+          <span data-meta="l2">Team Members</span>
+        </div>
+        <div class="project-meta-item" data-aos="fade-up" data-aos-delay="200">
+          <i data-lucide="layers"></i>
+          <strong data-meta="v3">12</strong>
+          <span data-meta="l3">Modules Delivered</span>
+        </div>
+        <div class="project-meta-item" data-aos="fade-up" data-aos-delay="300">
+          <i data-lucide="activity"></i>
+          <strong data-meta="v4">99.9%</strong>
+          <span data-meta="l4">Uptime</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-overview">
+    <div class="container">
+      <div class="project-overview-grid">
+        <div class="project-overview-main" data-aos="fade-up">
+          <h2 class="section-title-left" data-i18n="overview.title">About The Project</h2>
+          <p data-overview="p1">Overview paragraph one.</p>
+          <p data-overview="p2">Overview paragraph two.</p>
+          <p data-overview="p3">Overview paragraph three.</p>
+        </div>
+        <aside class="project-info-card" data-aos="fade-up" data-aos-delay="100">
+          <h3 data-i18n="info.title">Project Info</h3>
+          <dl id="infoList">
+            <div>
+              <dt data-i18n="info.client">Client</dt>
+              <dd data-info="client">—</dd>
+            </div>
+            <div>
+              <dt data-i18n="info.industry">Industry</dt>
+              <dd data-info="industry">—</dd>
+            </div>
+            <div>
+              <dt data-i18n="info.year">Year</dt>
+              <dd data-info="year">—</dd>
+            </div>
+            <div>
+              <dt data-i18n="info.role">Our Role</dt>
+              <dd data-info="role">—</dd>
+            </div>
+            <div>
+              <dt data-i18n="info.platform">Platform</dt>
+              <dd data-info="platform">—</dd>
+            </div>
+            <div>
+              <dt data-i18n="info.location">Location</dt>
+              <dd data-info="location">—</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-features">
+    <div class="container">
+      <h2 class="section-title" data-i18n="features.title" data-aos="fade-up">Key Features</h2>
+      <p class="section-subtitle" data-i18n="features.subtitle" data-aos="fade-up">Everything built to keep the
+        operation running smoothly end-to-end.</p>
+      <div class="project-features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="feature-icon"><i data-lucide="calendar-clock"></i></div>
+          <h3 data-f="t1">Feature</h3>
+          <p data-f="x1">Feature description.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i data-lucide="workflow"></i></div>
+          <h3 data-f="t2">Feature</h3>
+          <p data-f="x2">Feature description.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="feature-icon"><i data-lucide="bell-ring"></i></div>
+          <h3 data-f="t3">Feature</h3>
+          <p data-f="x3">Feature description.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon"><i data-lucide="credit-card"></i></div>
+          <h3 data-f="t4">Feature</h3>
+          <p data-f="x4">Feature description.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="feature-icon"><i data-lucide="map-pin"></i></div>
+          <h3 data-f="t5">Feature</h3>
+          <p data-f="x5">Feature description.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon"><i data-lucide="bar-chart-3"></i></div>
+          <h3 data-f="t6">Feature</h3>
+          <p data-f="x6">Feature description.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-stack">
+    <div class="container">
+      <h2 class="section-title" data-i18n="stack.title" data-aos="fade-up">Tech Stack</h2>
+      <p class="section-subtitle" data-i18n="stack.subtitle" data-aos="fade-up">Tools and technologies that power the
+        platform.</p>
+      <div class="stack-tags" id="stackTags" data-aos="fade-up"></div>
+    </div>
+  </section>
+
+  <section class="project-process">
+    <div class="container">
+      <h2 class="section-title" data-i18n="process.title" data-aos="fade-up">From Idea To Launch</h2>
+      <p class="section-subtitle" data-i18n="process.subtitle" data-aos="fade-up">How we delivered the project.</p>
+      <div class="process-steps">
+        <div class="process-step" data-aos="fade-up" data-aos-delay="50">
+          <div class="step-number">01</div>
+          <h3 data-step="t1">Discovery</h3>
+          <p data-step="x1">Process step description.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="150">
+          <div class="step-number">02</div>
+          <h3 data-step="t2">Architecture</h3>
+          <p data-step="x2">Process step description.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="250">
+          <div class="step-number">03</div>
+          <h3 data-step="t3">Development</h3>
+          <p data-step="x3">Process step description.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="350">
+          <div class="step-number">04</div>
+          <h3 data-step="t4">Launch & Support</h3>
+          <p data-step="x4">Process step description.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-next">
+    <div class="container">
+      <div class="next-card" data-aos="fade-up">
+        <div class="next-card-text">
+          <span class="next-eyebrow" data-i18n="next.eyebrow">Next Project</span>
+          <h2 id="nextTitle">Sanay3ya Baladna</h2>
+          <p id="nextText">A marketplace connecting customers with trusted local craftsmen and home service providers.
+          </p>
+        </div>
+        <a href="index.html#work" id="nextLink" class="btn btn-large" data-i18n="next.cta">Explore Project <i
+            data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><img src="assets/Group 310.svg" alt="SAMO"></a>
+          <p data-i18n="footer.tagline">A software development team that turns ideas into reliable, scalable products.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.nav_title">Navigate</h4>
+          <a href="index.html#home" data-i18n="nav.home">Home</a>
+          <a href="index.html#about" data-i18n="nav.about">About</a>
+          <a href="index.html#services" data-i18n="nav.services">Services</a>
+          <a href="index.html#work" data-i18n="nav.work">Work</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+        </div>
+        <div class="footer-contact">
+          <h4 data-i18n="footer.contact_title">Contact</h4>
+          <a href="mailto:info@samo.ws">info@samo.ws</a>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://x.com/Sam_ui0ux" aria-label="X / Twitter" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/share/1BYTmd4L1g/" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/samo.ws?igsh=MWxwMjNleWoxN2NtZw==" aria-label="Instagram"
+              target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SAMO. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/01553050260?text=Hi%20SAMO!%20I'd%20like%20to%20discuss%20a%20project." target="_blank"
+    rel="noopener" class="whatsapp-float" id="whatsappFloat" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/project.js"></script>
+</body>
+
+</html>
