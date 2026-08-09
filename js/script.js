@@ -123,7 +123,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-document.querySelectorAll('.work-card, .work-card-featured').forEach(card => {
+document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('click', e => {
     if (e.target.closest('a, button')) return;
     const href = card.dataset.href;

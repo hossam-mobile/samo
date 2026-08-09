@@ -362,7 +362,7 @@ function renderProject(lang) {
   document.getElementById('mockTitle').textContent = p.name[lang];
 
   document.getElementById('heroBadges').innerHTML = p.badges
-    .map(b => `<span class="work-tag">${b[lang]}</span>`)
+    .map(b => `<span class="project-hero-badge">${b[lang]}</span>`)
     .join('');
 
   ['v1', 'v2', 'v3', 'v4'].forEach(k => {
