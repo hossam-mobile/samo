@@ -1673,6 +1673,31 @@ section+section {
   color: var(--secondary);
 }
 
+.footer-social a.social-behance {
+  width: auto;
+  height: 36px;
+  padding: 0 14px;
+  gap: 6px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px -6px rgba(57, 108, 84, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.footer-social a.social-behance:hover {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-hover) 100%);
+  color: #fff;
+  box-shadow: 0 6px 22px -6px rgba(207, 117, 90, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.footer-social a.social-behance .behance-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
 .footer-bottom {
   border-top: 1px solid var(--border);
   padding-top: 24px;
@@ -1736,7 +1761,7 @@ section+section {
   left: 24px;
 }
 
-[dir="rtl"] .footer-social a svg {
+[dir="rtl"] .footer-social a:not(.social-behance) svg {
   transform: scaleX(-1);
 }
 
