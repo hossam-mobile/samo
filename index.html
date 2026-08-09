@@ -374,27 +374,38 @@
   </section>
 
   <section class="contact" id="contact">
+    <div class="contact-bg" aria-hidden="true">
+      <span class="contact-blob contact-blob--green"></span>
+      <span class="contact-blob contact-blob--coral"></span>
+      <span class="contact-blob contact-blob--gold"></span>
+    </div>
     <div class="container">
       <h2 class="section-title" data-i18n="contact.title" data-aos="fade-up">Get In Touch</h2>
       <p class="section-subtitle" data-i18n="contact.subtitle" data-aos="fade-up">Have a project? Let's talk about it.
       </p>
-      <form class="contact-form" id="contactForm">
-        <div class="form-group" data-aos="fade-up">
-          <input type="text" id="name" data-i18n-placeholder="contact.name_placeholder" placeholder="Your Name"
-            required>
+      <div class="glass-card" data-aos="fade-up">
+        <div class="glass-blobs" aria-hidden="true">
+          <span class="glass-blob glass-blob--green"></span>
+          <span class="glass-blob glass-blob--coral"></span>
+          <span class="glass-blob glass-blob--gold"></span>
         </div>
-        <div class="form-group" data-aos="fade-up" data-aos-delay="50">
-          <input type="email" id="email" data-i18n-placeholder="contact.email_placeholder" placeholder="Your Email"
-            required>
-        </div>
-        <div class="form-group" data-aos="fade-up" data-aos-delay="100">
-          <textarea id="message" rows="5" data-i18n-placeholder="contact.message_placeholder"
-            placeholder="Tell us about your project..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-full" data-i18n="contact.send" data-aos="fade-up" data-aos-delay="150">Send
-          Message</button>
-        <div class="form-message" id="formMessage"></div>
-      </form>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" data-i18n-placeholder="contact.name_placeholder" placeholder="Your Name"
+              required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" data-i18n-placeholder="contact.email_placeholder" placeholder="Your Email"
+              required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="5" data-i18n-placeholder="contact.message_placeholder"
+              placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-full" data-i18n="contact.send">Send Message</button>
+          <div class="form-message" id="formMessage"></div>
+        </form>
+      </div>
       <p class="contact-whatsapp" data-aos="fade-up">
         <a href="https://wa.me/01553050260?text=Hi%20SAMO!%20I'd%20like%20to%20discuss%20a%20project." target="_blank"
           rel="noopener" data-i18n="contact.whatsapp">Prefer WhatsApp? Chat with us instantly</a>
