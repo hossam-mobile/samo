@@ -182,113 +182,118 @@
       <p class="section-subtitle" data-i18n="work.subtitle" data-aos="fade-up">Real projects, real results.</p>
 
       <div class="work-grid">
-        <!-- Card 1: Elite Royal -->
-        <article class="project-card" data-aos="fade-up" data-aos-delay="0" data-href="project-details.html?project=elite-royal">
-          <a class="project-card-link" href="project-details.html?project=elite-royal" aria-label="View Elite Royal project"></a>
-          <div class="project-card-media">
-            <div class="project-card-placeholder" aria-hidden="true"><span class="project-card-ghost">01</span></div>
+        <!-- Card 1: Elite Royal (featured) -->
+        <article class="project-card span-featured" data-href="project-details.html?project=elite-royal">
+          <a class="pc-link" href="project-details.html?project=elite-royal" aria-label="View Elite Royal project"></a>
+          <div class="pc-media">
+            <div class="pc-media-inner" aria-hidden="true"><span class="pc-ghost">01</span></div>
           </div>
-          <div class="project-card-body">
-            <div class="project-card-top">
-              <span class="project-card-badge pc-badge--coral" data-i18n="work.project1_badge2">Backend Development</span>
-              <span class="project-card-number">01</span>
+          <div class="pc-body">
+            <div class="pc-top">
+              <span class="pc-badge pc-badge--coral" data-i18n="work.project1_badge">Backend Development</span>
+              <span class="pc-number">01</span>
             </div>
-            <h3 class="project-card-title" data-i18n="work.project1_title">Elite Royal - On-Demand Home Services Platform</h3>
-            <p class="project-card-desc" data-i18n="work.project1_desc">Engineered the backend architecture for an on-demand laundry & cleaning services platform. Implemented comprehensive workflow automation for pickup, active processing, and delivery cycles leveraging n8n orchestration.</p>
-            <div class="project-card-tags">
-              <span class="project-card-tag">Laravel</span>
-              <span class="project-card-tag">n8n</span>
-              <span class="project-card-tag">Node.js</span>
-              <span class="project-card-tag">MySQL</span>
+            <h3 class="pc-title" data-i18n="work.project1_title">Elite Royal</h3>
+            <p class="pc-line"><span class="pc-label" data-i18n="work.problem_label">Problem</span><span data-i18n="work.project1_problem">Pickup, processing, and delivery were coordinated manually across branches, causing delays and little visibility into order status.</span></p>
+            <p class="pc-line"><span class="pc-label" data-i18n="work.result_label">Result</span><span data-i18n="work.project1_result">Automated the full order lifecycle with n8n workflows — scheduling, processing, and courier dispatch — replacing manual coordination.</span></p>
+            <div class="pc-tags">
+              <span class="pc-tag">Laravel</span>
+              <span class="pc-tag">n8n</span>
+              <span class="pc-tag">MySQL</span>
             </div>
-          </div>
-        </article>
-
-        <!-- Card 2: Sanay3ya Baladna -->
-        <article class="project-card" data-aos="fade-up" data-aos-delay="50" data-href="project-details.html?project=sanay3ya-baladna">
-          <a class="project-card-link" href="project-details.html?project=sanay3ya-baladna" aria-label="View Sanay3ya Baladna project"></a>
-          <div class="project-card-media">
-            <div class="project-card-placeholder" aria-hidden="true"><span class="project-card-ghost">02</span></div>
-          </div>
-          <div class="project-card-body">
-            <div class="project-card-top">
-              <span class="project-card-badge pc-badge--green" data-i18n="work.project2_badge">Web Development</span>
-              <span class="project-card-number">02</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="work.project2_title">Sanay3ya Baladna - صنايعية بلدنا</h3>
-            <p class="project-card-desc" data-i18n="work.project2_desc">Sanay3ya Baladna is a modern full-stack marketplace for local craftsmen and home service providers, simplifying service booking and communication.</p>
-            <div class="project-card-tags">
-              <span class="project-card-tag">Laravel</span>
-              <span class="project-card-tag">Next.js</span>
-              <span class="project-card-tag">REST API</span>
-              <span class="project-card-tag">MySQL</span>
-            </div>
+            <span class="pc-cta" data-i18n="work.cta">View Project</span>
           </div>
         </article>
 
-        <!-- Card 3: Ham Ham -->
-        <article class="project-card" data-aos="fade-up" data-aos-delay="100" data-href="project-details.html?project=ham-ham">
-          <a class="project-card-link" href="project-details.html?project=ham-ham" aria-label="View Ham Ham project"></a>
-          <div class="project-card-media">
-            <div class="project-card-placeholder" aria-hidden="true"><span class="project-card-ghost">03</span></div>
+        <!-- Card 2: Sanay3ya Baladna (tall) -->
+        <article class="project-card span-tall" data-href="project-details.html?project=sanay3ya-baladna">
+          <a class="pc-link" href="project-details.html?project=sanay3ya-baladna" aria-label="View Sanay3ya Baladna project"></a>
+          <div class="pc-media">
+            <div class="pc-media-inner" aria-hidden="true"><span class="pc-ghost">02</span></div>
           </div>
-          <div class="project-card-body">
-            <div class="project-card-top">
-              <span class="project-card-badge pc-badge--gold" data-i18n="work.project3_badge">Full Stack</span>
-              <span class="project-card-number">03</span>
+          <div class="pc-body">
+            <div class="pc-top">
+              <span class="pc-badge pc-badge--green" data-i18n="work.project2_badge">Web Development</span>
+              <span class="pc-number">02</span>
             </div>
-            <h3 class="project-card-title" data-i18n="work.project3_title">Ham Ham Restaurant Ordering</h3>
-            <p class="project-card-desc" data-i18n="work.project3_desc">Engineered backend systems for a restaurant ordering platform supporting real-time order tracking, menu management, and multi-branch operations.</p>
-            <div class="project-card-tags">
-              <span class="project-card-tag">Laravel</span>
-              <span class="project-card-tag">Node.js</span>
-              <span class="project-card-tag">Redis</span>
-              <span class="project-card-tag">WebSockets</span>
+            <h3 class="pc-title" data-i18n="work.project2_title">Sanay3ya Baladna</h3>
+            <p class="pc-line"><span class="pc-label" data-i18n="work.problem_label">Problem</span><span data-i18n="work.project2_problem">Customers had no reliable way to find and book trusted local craftsmen, who relied on word-of-mouth for new work.</span></p>
+            <p class="pc-line"><span class="pc-label" data-i18n="work.result_label">Result</span><span data-i18n="work.project2_result">Built a full-stack marketplace with verified profiles, instant booking, and real-time chat between customers and craftsmen.</span></p>
+            <div class="pc-tags">
+              <span class="pc-tag">Laravel</span>
+              <span class="pc-tag">Next.js</span>
+              <span class="pc-tag">MySQL</span>
             </div>
-          </div>
-        </article>
-
-        <!-- Card 4: 4AURA -->
-        <article class="project-card" data-aos="fade-up" data-aos-delay="150" data-href="project-details.html?project=4aura">
-          <a class="project-card-link" href="project-details.html?project=4aura" aria-label="View 4AURA project"></a>
-          <div class="project-card-media">
-            <div class="project-card-placeholder" aria-hidden="true"><span class="project-card-ghost">04</span></div>
-          </div>
-          <div class="project-card-body">
-            <div class="project-card-top">
-              <span class="project-card-badge pc-badge--green" data-i18n="work.project4_badge">Web Development</span>
-              <span class="project-card-number">04</span>
-            </div>
-            <h3 class="project-card-title" data-i18n="work.project4_title">4AURA</h3>
-            <p class="project-card-desc" data-i18n="work.project4_desc">Developed backend for a corporate landing page focused on protocol and event management, delivering high performance and seamless integrations.</p>
-            <div class="project-card-tags">
-              <span class="project-card-tag">Laravel</span>
-              <span class="project-card-tag">Next.js</span>
-              <span class="project-card-tag">REST API</span>
-              <span class="project-card-tag">MySQL</span>
-            </div>
+            <span class="pc-cta" data-i18n="work.cta">View Project</span>
           </div>
         </article>
 
-        <!-- Card 5: Extra Pharma -->
-        <article class="project-card" data-aos="fade-up" data-aos-delay="200" data-href="project-details.html?project=extra-pharma">
-          <a class="project-card-link" href="project-details.html?project=extra-pharma" aria-label="View Extra Pharma project"></a>
-          <div class="project-card-media">
-            <div class="project-card-placeholder" aria-hidden="true"><span class="project-card-ghost">05</span></div>
+        <!-- Project 3: Ham Ham (small) -->
+        <article class="project-card span-small" data-href="project-details.html?project=ham-ham">
+          <a class="pc-link" href="project-details.html?project=ham-ham" aria-label="View Ham Ham project"></a>
+          <div class="pc-media">
+            <div class="pc-media-inner" aria-hidden="true"><span class="pc-ghost">03</span></div>
           </div>
-          <div class="project-card-body">
-            <div class="project-card-top">
-              <span class="project-card-badge pc-badge--coral" data-i18n="work.project5_badge">Backend Development</span>
-              <span class="project-card-number">05</span>
+          <div class="pc-overlay">
+            <div class="pc-top">
+              <span class="pc-badge pc-badge--gold" data-i18n="work.project3_badge">Full Stack</span>
+              <span class="pc-number">03</span>
             </div>
-            <h3 class="project-card-title" data-i18n="work.project5_title">Extra Pharma - Healthcare Staffing</h3>
-            <p class="project-card-desc" data-i18n="work.project5_desc">Designed robust backend architecture for a healthcare staffing platform, reducing database query latency and improving clinician scheduling efficiency.</p>
-            <div class="project-card-tags">
-              <span class="project-card-tag">Laravel</span>
-              <span class="project-card-tag">PHP</span>
-              <span class="project-card-tag">MySQL</span>
-              <span class="project-card-tag">Redis</span>
+            <h3 class="pc-title" data-i18n="work.project3_title">Ham Ham</h3>
+            <p class="pc-line"><span class="pc-label" data-i18n="work.problem_label">Problem</span><span data-i18n="work.project3_problem">Orders were handled over the phone, so status updates and coordination across branches always lagged.</span></p>
+            <p class="pc-line"><span class="pc-label" data-i18n="work.result_label">Result</span><span data-i18n="work.project3_result">Engineered a real-time ordering system with live order tracking and consistent menu and pricing across every branch.</span></p>
+            <div class="pc-tags">
+              <span class="pc-tag">Laravel</span>
+              <span class="pc-tag">Redis</span>
+              <span class="pc-tag">WebSockets</span>
             </div>
+            <span class="pc-cta" data-i18n="work.cta">View Project</span>
+          </div>
+        </article>
+
+        <!-- Project 4: 4AURA (wide) -->
+        <article class="project-card span-wide" data-href="project-details.html?project=4aura">
+          <a class="pc-link" href="project-details.html?project=4aura" aria-label="View 4AURA project"></a>
+          <div class="pc-media">
+            <div class="pc-media-inner" aria-hidden="true"><span class="pc-ghost">04</span></div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-top">
+              <span class="pc-badge pc-badge--green" data-i18n="work.project4_badge">Web Development</span>
+              <span class="pc-number">04</span>
+            </div>
+            <h3 class="pc-title" data-i18n="work.project4_title">4AURA</h3>
+            <p class="pc-line"><span class="pc-label" data-i18n="work.problem_label">Problem</span><span data-i18n="work.project4_problem">The practice needed a fast, elegant web presence that non-technical staff could update without engineering help.</span></p>
+            <p class="pc-line"><span class="pc-label" data-i18n="work.result_label">Result</span><span data-i18n="work.project4_result">Delivered a high-performance corporate site powered by a custom CMS for events, protocol content, and media.</span></p>
+            <div class="pc-tags">
+              <span class="pc-tag">Laravel</span>
+              <span class="pc-tag">Next.js</span>
+              <span class="pc-tag">MySQL</span>
+            </div>
+            <span class="pc-cta" data-i18n="work.cta">View Project</span>
+          </div>
+        </article>
+
+        <!-- Project 5: Extra Pharma (medium) -->
+        <article class="project-card span-medium" data-href="project-details.html?project=extra-pharma">
+          <a class="pc-link" href="project-details.html?project=extra-pharma" aria-label="View Extra Pharma project"></a>
+          <div class="pc-media">
+            <div class="pc-media-inner" aria-hidden="true"><span class="pc-ghost">05</span></div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-top">
+              <span class="pc-badge pc-badge--coral" data-i18n="work.project5_badge">Backend Development</span>
+              <span class="pc-number">05</span>
+            </div>
+            <h3 class="pc-title" data-i18n="work.project5_title">Extra Pharma</h3>
+            <p class="pc-line"><span class="pc-label" data-i18n="work.problem_label">Problem</span><span data-i18n="work.project5_problem">Matching thousands of clinician profiles to facility shifts was slow, hurting the search and scheduling experience.</span></p>
+            <p class="pc-line"><span class="pc-label" data-i18n="work.result_label">Result</span><span data-i18n="work.project5_result">Optimized queries to return relevant matches in milliseconds and streamlined shift scheduling and confirmations.</span></p>
+            <div class="pc-tags">
+              <span class="pc-tag">Laravel</span>
+              <span class="pc-tag">MySQL</span>
+              <span class="pc-tag">Redis</span>
+            </div>
+            <span class="pc-cta" data-i18n="work.cta">View Project</span>
           </div>
         </article>
       </div>

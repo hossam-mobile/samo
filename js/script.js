@@ -9,23 +9,29 @@ const translations = {
     work: {
       title: 'Our Work',
       subtitle: 'Real projects, real results.',
-      project1_badge1: 'Featured Spotlight',
-      project1_badge2: 'Backend Development',
-      project1_title: 'Elite Royal - On-Demand Home Services Platform',
-      project1_desc: 'Engineered the backend architecture for an on-demand laundry & cleaning services platform. Implemented comprehensive workflow automation for pickup, active processing, and delivery cycles leveraging n8n orchestration.',
+      problem_label: 'Problem',
+      result_label: 'Result',
+      project1_badge: 'Backend Development',
+      project1_title: 'Elite Royal',
+      project1_problem: 'Pickup, processing, and delivery were coordinated manually across branches, causing delays and little visibility into order status.',
+      project1_result: 'Automated the full order lifecycle with n8n workflows — scheduling, processing, and courier dispatch — replacing manual coordination.',
       project2_badge: 'Web Development',
-      project2_title: 'Sanay3ya Baladna - صنايعية بلدنا',
-      project2_desc: 'Sanay3ya Baladna is a modern full-stack marketplace for local craftsmen and home service providers, simplifying service booking and communication.',
+      project2_title: 'Sanay3ya Baladna',
+      project2_problem: 'Customers had no reliable way to find and book trusted local craftsmen, who relied on word-of-mouth for new work.',
+      project2_result: 'Built a full-stack marketplace with verified profiles, instant booking, and real-time chat between customers and craftsmen.',
       project3_badge: 'Full Stack',
-      project3_title: 'Ham Ham Restaurant Ordering',
-      project3_desc: 'Engineered backend systems for a restaurant ordering platform supporting real-time order tracking, menu management, and multi-branch operations.',
+      project3_title: 'Ham Ham',
+      project3_problem: 'Orders were handled over the phone, so status updates and coordination across branches always lagged.',
+      project3_result: 'Engineered a real-time ordering system with live order tracking and consistent menu and pricing across every branch.',
       project4_badge: 'Web Development',
       project4_title: '4AURA',
-      project4_desc: 'Developed backend for a corporate landing page focused on protocol and event management, delivering high performance and seamless integrations.',
+      project4_problem: 'The practice needed a fast, elegant web presence that non-technical staff could update without engineering help.',
+      project4_result: 'Delivered a high-performance corporate site powered by a custom CMS for events, protocol content, and media.',
       project5_badge: 'Backend Development',
-      project5_title: 'Extra Pharma - Healthcare Staffing',
-      project5_desc: 'Designed robust backend architecture for a healthcare staffing platform, reducing database query latency and improving clinician scheduling efficiency.',
-      explore: 'Explore Project'
+      project5_title: 'Extra Pharma',
+      project5_problem: 'Matching thousands of clinician profiles to facility shifts was slow, hurting the search and scheduling experience.',
+      project5_result: 'Optimized queries to return relevant matches in milliseconds and streamlined shift scheduling and confirmations.',
+      cta: 'View Project'
     },
     testimonials: { title: 'What Our Clients Say', subtitle: 'Trusted by startups and enterprises alike.', quote1: '"SAMO transformed our outdated platform into a modern, scalable product. The team\'s technical expertise and communication were exceptional."', role1: 'CTO, FintechScale', quote2: '"Working with SAMO felt like an extension of our own team. They delivered ahead of schedule and the quality exceeded our expectations."', role2: 'Founder, CloudMart', quote3: '"They didn\'t just build our app — they helped us think through the product strategy. A rare combination of technical and strategic thinking."', role3: 'Product Lead, HealthBridge' },
     clients: { title: 'Trusted By' },
@@ -43,23 +49,29 @@ const translations = {
     work: {
       title: 'أعمالنا',
       subtitle: 'مشاريع حقيقية، نتائج حقيقية.',
-      project1_badge1: 'تسليط الضوء',
-      project1_badge2: 'تطوير الأنظمة الخلفية',
-      project1_title: 'إيليت رويال - منصة الخدمات المنزلية عند الطلب',
-      project1_desc: 'تم تصميم وهندسة البنية التحتية الخلفية لمنصة خدمات الغسيل والتنظيف عند الطلب. تنفيذ أتمتة كاملة لتدفق العمل لعمليات الاستلام، المعالجة النشطة، ودورات التسليم باستخدام n8n.',
+      problem_label: 'المشكلة',
+      result_label: 'النتيجة',
+      project1_badge: 'تطوير الأنظمة الخلفية',
+      project1_title: 'إيليت رويال',
+      project1_problem: 'كانت عمليات الاستلام والمعالجة والتسليم تُنسق يدويًا بين الفروع، مما تسبب في تأخيرات وغياب رؤية واضحة لحالة الطلب.',
+      project1_result: 'أتمتة دورة حياة الطلب بالكامل عبر سير عمل n8n — من الجدولة إلى التجهيز وتوزيع السائقين — بدلًا من التنسيق اليدوي.',
       project2_badge: 'تطوير الويب',
-      project2_title: 'صنايعية بلدنا - Sanay3ya Baladna',
-      project2_desc: 'منصة متكاملة حديثة لربط الحرفيين المحليين ومقدمي الخدمات المنزلية، وتسهيل حجز الخدمات والتواصل المباشر.',
+      project2_title: 'صنايعية بلدنا',
+      project2_problem: 'لم يكن لدى العملاء طريقة موثوقة للعثور على حرفيين محليين موثوقين وحجزهم، وكان الحرفيون يعتمدون على التوصيات الشفهية.',
+      project2_result: 'بناء منصة متكاملة مع ملفات موثقة وحجز فوري ومحادثة لحظية بين العملاء والحرفيين.',
       project3_badge: 'تطوير متكامل',
-      project3_title: 'هم هم - منصة طلبات المطاعم',
-      project3_desc: 'تطوير الأنظمة الخلفية لمنصة طلبات مطاعم تدعم تتبع الطلبات في الوقت الفعلي، إدارة القوائم، والعمليات متعددة الفروع.',
+      project3_title: 'هم هم',
+      project3_problem: 'كانت الطلبات تُدار عبر الهاتف، لذا كانت تحديثات الحالة والتنسيق بين الفروع متأخرة دائمًا.',
+      project3_result: 'هندسة نظام طلبات لحظي مع تتبع مباشر للطلبات وقوائم وأسعار موحدة في كل فرع.',
       project4_badge: 'تطوير الويب',
-      project4_title: '4AURA',
-      project4_desc: 'تطوير النظام الخلفي لصفحة هبوط مؤسسية تركز على إدارة البروتوكولات والفعاليات، مع تقديم أداء عالٍ وتكامل سلس.',
+      project4_title: 'فور أورا',
+      project4_problem: 'احتاجت الشركة إلى حضور إلكتروني سريع وأنيق يمكن للفريق غير التقني تحديثه دون مساعدة هندسية.',
+      project4_result: 'تسليم موقع مؤسسي عالي الأداء مدعوم بنظام محتوى مخصص للفعاليات والمحتوى البروتوكولي والوسائط.',
       project5_badge: 'تطوير الأنظمة الخلفية',
-      project5_title: 'إكسترا فارما - توظيف الرعاية الصحية',
-      project5_desc: 'تصميم بنية تحتية خلفية قوية لمنصة توظيف الرعاية الصحية، مما قلل من زمن استجابة الاستعلامات وحسن كفاءة جدولة الأطباء.',
-      explore: 'استكشف المشروع'
+      project5_title: 'إكسترا فارما',
+      project5_problem: 'كانت مطابقة آلاف ملفات الأطباء مع مناوبات المنشآت بطيئة، مما أثر على تجربة البحث والجدولة.',
+      project5_result: 'تحسين الاستعلامات لتُعيد النتائج المطابقة خلال أجزاء من الثانية وتبسيط جدولة المناوبات والتأكيدات.',
+      cta: 'التفاصيل'
     },
     testimonials: { title: 'ماذا يقول عملاؤنا', subtitle: 'موثوق من قبل الشركات الناشئة والمؤسسات على حد سواء.', quote1: '"حولت سامو منصتنا القديمة إلى منتج حديث وقابل للتوسع. خبرة الفريق التقنية والتواصل كانت استثنائية."', role1: 'المدير التقني، FintechScale', quote2: '"العمل مع سامو كان كأنهم امتداد لفريقنا. سلموا قبل الموعد المحدد والجودة تجاوزت توقعاتنا."', role2: 'المؤسس، CloudMart', quote3: '"لم يبنوا تطبيقنا فقط — بل ساعدونا في التفكير في استراتيجية المنتج. مزيج نادر من التفكير التقني والاستراتيجي."', role3: 'قائد المنتج، HealthBridge' },
     clients: { title: 'موثوق من قبل' },
@@ -130,6 +142,26 @@ document.querySelectorAll('.project-card').forEach(card => {
     if (href) window.location.href = href;
   });
 });
+
+const workGrid = document.querySelector('.work-grid');
+if (workGrid) {
+  const cards = workGrid.querySelectorAll('.project-card');
+  cards.forEach((card, i) => {
+    card.style.setProperty('--stagger', (i * 90) + 'ms');
+    card.addEventListener('animationend', () => {
+      card.style.animation = 'none';
+    }, { once: true });
+  });
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        cardObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  cards.forEach(card => cardObserver.observe(card));
+}
 
 const form = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
