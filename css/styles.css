@@ -678,6 +678,20 @@ section+section {
   margin-bottom: 32px;
 }
 
+.work-featured-row .work-card {
+  height: 100%;
+}
+
+.work-featured-row .work-card-media {
+  height: auto;
+  flex: 1 1 auto;
+  min-height: 220px;
+}
+
+.work-featured-row .work-card-body {
+  padding: 28px;
+}
+
 .work-card-featured {
   position: relative;
   background: rgba(251, 247, 234, 0.55);
@@ -794,6 +808,7 @@ section+section {
   color: #73827B;
   line-height: 1.6;
   margin-bottom: 32px;
+  max-width: 620px;
 }
 
 .work-mockup-wrapper {
@@ -970,6 +985,7 @@ section+section {
   align-items: center;
   margin-top: auto;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .work-card-tags {
@@ -1082,6 +1098,11 @@ section+section {
   align-items: center;
   justify-content: center;
   box-shadow: 0 18px 40px rgba(26, 29, 26, 0.28);
+  transition: transform 0.4s ease;
+}
+
+.work-card:hover .mock-ui {
+  transform: scale(1.05);
 }
 
 .mock-craftsmen {
@@ -1227,6 +1248,8 @@ section+section {
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .btn-arrow {
@@ -1951,6 +1974,12 @@ section+section {
   .work-featured-row,
   .work-row-grid {
     grid-template-columns: 1fr;
+  }
+
+  .work-featured-row .work-card-media {
+    height: 240px;
+    flex: none;
+    min-height: 0;
   }
 
   .work-card-featured {
