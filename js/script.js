@@ -1,7 +1,24 @@
 const translations = {
   en: {
-    nav: { home: 'Home', about: 'About', services: 'Services', work: 'Work', contact: 'Contact' },
-    hero: { eyebrow: 'Independent expertise, now one team', title: 'We Build <span class="highlight">Digital</span> Products — Right The First Time', subtitle: 'Our engineers have shipped real projects in healthcare, real estate, food & retail — individually, for years. Now we\'re building together.', cta1: 'See Our Work', cta2: 'Book a Free Consultation', trust1: 'Booking systems for clinics', trust2: 'Lead platforms for real-estate', trust3: 'Ordering systems for food & retail brands' },
+    nav: { home: 'Home', about: 'About', services: 'Services', work: 'Work', contact: 'Contact', cta: 'Book a Call' },
+    hero: {
+      eyebrow: '<span class="pulse-dot"></span><span class="eyebrow-text">SAMO &bull; Software Engineering Studio</span><span class="eyebrow-badge">v2.0</span>',
+      title: 'We Engineer <span class="gradient-text-emerald">High-Impact</span> <span class="gradient-text-coral">Digital Products</span> — Right The First Time',
+      subtitle: 'A boutique software collective crafting mission-critical platforms, web applications, and mobile experiences for ambitious leaders worldwide.',
+      cta1: 'Explore Portfolio <i data-lucide="arrow-right"></i>',
+      cta2: '<i data-lucide="calendar"></i> Book Architecture Call',
+      pillar1_title: 'Healthcare Tech',
+      pillar2_title: 'Real Estate',
+      pillar3_title: 'Food & Retail',
+      trust1: 'Clinical booking & telemedicine platforms',
+      trust2: 'PropTech lead & property portals',
+      trust3: 'High-scale ordering & inventory',
+      float1_label: 'System Performance',
+      float2_label: 'Shipped Products',
+      tab_arch: 'Architecture',
+      tab_stack: 'Tech Stack',
+      tab_solutions: 'Sectors'
+    },
     stats: { projects: 'Projects Delivered', years: 'Years Experience', clients: 'Happy Clients', team: 'Team Members' },
     about: { title: 'About Us', subtitle: 'We are SAMO — a tight-knit software development team that turns ideas into reliable, scalable products. From startups to established businesses, we partner with you through the entire journey.', mission: 'Mission', mission_text: 'Deliver high-quality software that solves real problems, on time and without the fluff.', approach: 'Approach', approach_text: 'Agile, transparent, and focused. Small team means fewer meetings and more shipping.', team: 'Team', team_text: 'Designers, front-end & back-end developers who actually enjoy working together.' },
     process: { title: 'How We Work', subtitle: 'A streamlined process from idea to launch.', step1_title: 'Discovery', step1_text: 'We learn about your goals, users, and technical requirements through deep research.', step2_title: 'Design', step2_text: 'We craft intuitive interfaces and seamless user experiences backed by testing.', step3_title: 'Development', step3_text: 'We build with modern stacks, clean code, and continuous integration from day one.', step4_title: 'Launch', step4_text: 'We deploy, monitor, and support — ensuring a smooth go-live and beyond.' },
@@ -40,8 +57,25 @@ const translations = {
     footer: { tagline: 'A software development team that turns ideas into reliable, scalable products.', nav_title: 'Navigate', contact_title: 'Contact', rights: 'All rights reserved.' }
   },
   ar: {
-    nav: { home: 'الرئيسية', about: 'من نحن', services: 'خدماتنا', work: 'أعمالنا', contact: 'اتصل بنا' },
-    hero: { eyebrow: 'خبرة مستقلة، الآن فريق واحد', title: 'نبني منتجات <span class="highlight">رقمية</span> — بشكل صحيح من أول مرة', subtitle: 'مهندسونا قدّموا مشاريع حقيقية في الرعاية الصحية والعقارات والغذاء والتجزئة — بشكل فردي لسنوات. الآن نبني معًا.', cta1: 'شاهد أعمالنا', cta2: 'احجز استشارة مجانية', trust1: 'أنظمة حجز للعيادات', trust2: 'منصات عملاء للعقارات', trust3: 'أنظمة طلب للعلامات الغذائية والتجزئة' },
+    nav: { home: 'الرئيسية', about: 'من نحن', services: 'خدماتنا', work: 'أعمالنا', contact: 'اتصل بنا', cta: 'احجز مكالمة' },
+    hero: {
+      eyebrow: '<span class="pulse-dot"></span><span class="eyebrow-text">استوديو سامو لهندسة البرمجيات</span><span class="eyebrow-badge">v2.0</span>',
+      title: 'نهندس منتجات <span class="gradient-text-emerald">رقمية</span> <span class="gradient-text-coral">استثنائية</span> — من المرة الأولى',
+      subtitle: 'استوديو برمجي متطور يبني منصات حيوية، تطبيقات ويب وجوال فائقة السرعة والقابلية للتوسع للشركات والطموحين.',
+      cta1: 'استكشف أعمالنا <i data-lucide="arrow-left"></i>',
+      cta2: '<i data-lucide="calendar"></i> احجز استشارة هندسية',
+      pillar1_title: 'تقنية الرعاية الصحية',
+      pillar2_title: 'منصات العقارات',
+      pillar3_title: 'الغذاء والتجزئة',
+      trust1: 'أنظمة حجز للعيادات والمراكز الطبية',
+      trust2: 'منصات إدارة العملاء والعقارات',
+      trust3: 'أنظمة طلب متكاملة للعلامات التجاريّة',
+      float1_label: 'أداء وكفاءة الأنظمة',
+      float2_label: 'المشاريع المسلّمة',
+      tab_arch: 'البنية الهندسية',
+      tab_stack: 'مصفوفة التقنيات',
+      tab_solutions: 'القطاعات'
+    },
     stats: { projects: 'مشروعًا تم تسليمه', years: 'سنوات خبرة', clients: 'عميلاً سعيدًا', team: 'عضوًا في الفريق' },
     about: { title: 'من نحن', subtitle: 'نحن سامو — فريق تطوير برمجيات متماسك يحول الأفكار إلى منتجات موثوقة وقابلة للتوسع. من الشركات الناشئة إلى المؤسسات القائمة، نشاركك رحلتك بالكامل.', mission: 'الرسالة', mission_text: 'تقديم برامج عالية الجودة تحل مشاكل حقيقية، في الوقت المحدد وبدون تعقيد.', approach: 'النهج', approach_text: 'مرن وشفاف ومركز. الفريق الصغير يعني اجتماعات أقل وإنجاز أكثر.', team: 'الفريق', team_text: 'مصممون ومطورو واجهات أمامية وخلفية يستمتعون حقًا بالعمل معًا.' },
     process: { title: 'كيف نعمل', subtitle: 'عملية مبسطة من الفكرة إلى الإطلاق.', step1_title: 'الاكتشاف', step1_text: 'نتعرف على أهدافك ومستخدميك ومتطلباتك التقنية من خلال بحث معمق.', step2_title: 'التصميم', step2_text: 'نصمم واجهات بديهية وتجارب مستخدم سلسة مدعومة بالاختبارات.', step3_title: 'التطوير', step3_text: 'نبني باستخدام أحدث التقنيات وكود نظيف وتكامل مستمر من اليوم الأول.', step4_title: 'الإطلاق', step4_text: 'ننشر ونتابع وندعم — لضمان إطلاق سلس وما بعده.' },
@@ -114,6 +148,10 @@ function applyLanguage(lang) {
 
   document.getElementById('langText').textContent = lang === 'en' ? 'AR' : 'EN';
   document.title = lang === 'en' ? 'SAMO - Software Development Team' : 'سامو - فريق تطوير البرمجيات';
+  
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
 }
 
 document.getElementById('langToggle').addEventListener('click', () => {
@@ -128,7 +166,17 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
 });
 
-document.querySelectorAll('.nav-links a').forEach(link => {
+document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    if (window.innerWidth <= 991) {
+      e.preventDefault();
+      const parent = btn.closest('.nav-dropdown');
+      parent.classList.toggle('active');
+    }
+  });
+});
+
+document.querySelectorAll('.dropdown-item, .nav-links a:not(.dropdown-toggle)').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');
     hamburger.classList.remove('active');
@@ -206,6 +254,19 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
       }
 
+      // Active nav link scrollspy
+      const sections = document.querySelectorAll('section[id]');
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 140;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+          document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+          const activeLink = document.querySelector(`.nav-links a[href*="${sectionId}"]`);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+
       whatsappFloat.classList.toggle('visible', scrollTop > window.innerHeight * 0.4);
       ticking = false;
     });
@@ -262,3 +323,140 @@ document.querySelectorAll('[data-aos]').forEach(el => {
 });
 
 lucide.createIcons();
+
+/* ==========================================================================
+   Hero Showcase Interactive Controls (Tabs, Spotlight & 3D Glass Physics)
+   ========================================================================== */
+
+// Showcase Tab Switching
+document.querySelectorAll('.showcase-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const targetTab = tab.dataset.tab;
+    document.querySelectorAll('.showcase-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.showcase-pane').forEach(p => p.classList.remove('active'));
+    
+    tab.classList.add('active');
+    const pane = document.getElementById(`pane-${targetTab}`);
+    if (pane) {
+      pane.classList.add('active');
+    }
+  });
+});
+
+// Mouse Spotlight Movement in Hero Section
+const heroSection = document.getElementById('home');
+const heroSpotlight = document.getElementById('heroSpotlight');
+if (heroSection && heroSpotlight) {
+  heroSection.addEventListener('mousemove', (e) => {
+    const rect = heroSection.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    heroSpotlight.style.setProperty('--mouse-x', `${x}px`);
+    heroSpotlight.style.setProperty('--mouse-y', `${y}px`);
+  });
+}
+
+// 3D Tilt Physics on Hero Showcase Window Frame
+const showcaseWindow = document.getElementById('heroShowcase');
+if (showcaseWindow && window.innerWidth > 991) {
+  const showcaseWrapper = showcaseWindow.closest('.hero-showcase-wrapper');
+  if (showcaseWrapper) {
+    showcaseWrapper.addEventListener('mousemove', (e) => {
+      const rect = showcaseWindow.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      const tiltX = (y / (rect.height / 2)) * -5;
+      const tiltY = (x / (rect.width / 2)) * 5;
+      showcaseWindow.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+    });
+
+    showcaseWrapper.addEventListener('mouseleave', () => {
+      showcaseWindow.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  }
+}
+
+// 3D Grid Card Zoom & Scale Physics on Scroll & Mouse Hover
+function init3DCardStack() {
+  const stackCards = document.querySelectorAll('.stack-card');
+  const workContainer = document.getElementById('workStack');
+  if (!stackCards.length || !workContainer) return;
+
+  function update3DGridScroll() {
+    const viewportHeight = window.innerHeight;
+
+    stackCards.forEach((card) => {
+      if (card.dataset.hovering === 'true') return;
+
+      const rect = card.getBoundingClientRect();
+      const cardCenter = rect.top + rect.height / 2;
+      const viewportCenter = viewportHeight * 0.55;
+      
+      const distance = cardCenter - viewportCenter;
+      const maxDistance = viewportHeight * 0.6;
+      const normDist = Math.max(-1, Math.min(1, distance / maxDistance));
+
+      let scale = 1;
+      let rotateX = 0;
+      let translateZ = 0;
+      let opacity = 1;
+
+      if (normDist > 0) {
+        // Below center (scrolling down to view): Zooms in from depth
+        scale = 1.05 - normDist * 0.22; // Scale from 0.83 up to 1.05
+        rotateX = normDist * 16;        // 3D tilt 16deg
+        translateZ = -normDist * 180;   // Depth back -180px
+        opacity = 1 - normDist * 0.45;  // Fade from 0.55 to 1.0
+      } else {
+        // Above center (scrolling past): Subtle stack depth receding
+        const p = Math.abs(normDist);
+        scale = 1.05 - p * 0.12;
+        rotateX = -p * 8;
+        translateZ = -p * 80;
+        opacity = 1 - p * 0.35;
+      }
+
+      card.style.transform = `perspective(1200px) translateZ(${translateZ}px) rotateX(${rotateX}deg) scale(${scale})`;
+      card.style.opacity = Math.max(0.35, opacity).toFixed(2);
+    });
+  }
+
+  // Mouse hover 3D tilt tracking
+  stackCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      card.dataset.hovering = 'true';
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      const tiltX = (y / (rect.height / 2)) * -9;
+      const tiltY = (x / (rect.width / 2)) * 9;
+      card.style.transform = `perspective(1200px) scale(1.06) translateZ(40px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+      card.style.opacity = '1';
+      card.style.zIndex = '10';
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.dataset.hovering = 'false';
+      card.style.zIndex = '1';
+      update3DGridScroll();
+    });
+  });
+
+  let ticking = false;
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        update3DGridScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', update3DGridScroll, { passive: true });
+
+  update3DGridScroll();
+}
+
+init3DCardStack();
