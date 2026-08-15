@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAMO Admin Dashboard</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+  <div class="admin-shell">
+
+    <!-- ── Top Header ─────────────────────────────────────────────────── -->
+    <header class="admin-header">
+      <div class="header-brand">
+        <button id="menuToggle" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <img src="assets/Group 310.svg" alt="SAMO" class="header-logo">
+        <span class="header-badge">Admin</span>
+      </div>
+      <div class="header-right">
+        <span class="header-title">Website Dashboard</span>
+        <div class="header-actions">
+          <button id="btnViewSite" class="btn btn-ghost btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            View Site
+          </button>
+          <button id="btnExport" class="btn btn-ghost btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Export JSON
+          </button>
+          <button id="btnReset" class="btn btn-danger btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+            Reset
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── Sidebar ────────────────────────────────────────────────────── -->
+    <nav class="admin-sidebar" id="adminSidebar">
+      <div class="sidebar-section-label">Dashboard</div>
+
+      <button class="nav-item active" data-panel="panel-overview">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Overview
+      </button>
+
+      <div class="sidebar-section-label">Content</div>
+
+      <button class="nav-item" data-panel="panel-hero">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Hero Section
+      </button>
+
+      <button class="nav-item" data-panel="panel-stats">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Stats
+      </button>
+
+      <button class="nav-item" data-panel="panel-services">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        Services
+      </button>
+
+      <button class="nav-item" data-panel="panel-projects">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8L6 7h12l-2-4z"/></svg>
+        Projects
+      </button>
+
+      <button class="nav-item" data-panel="panel-testimonials">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Testimonials
+      </button>
+
+      <div class="sidebar-section-label">Settings</div>
+
+      <button class="nav-item" data-panel="panel-contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Contact & Links
+      </button>
+    </nav>
+
+    <!-- ── Main Content ───────────────────────────────────────────────── -->
+    <main class="admin-main">
+
+      <!-- OVERVIEW ──────────────────────────────────────────────────── -->
+      <section class="admin-panel" id="panel-overview">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <h1>Overview</h1>
+            <p>A snapshot of your website content</p>
+          </div>
+        </div>
+
+        <div class="overview-grid">
+          <div class="overview-card">
+            <div class="ov-icon emerald">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8L6 7h12l-2-4z"/></svg>
+            </div>
+            <div class="ov-label">Projects</div>
+            <div class="ov-value" id="ov-projects">—</div>
+          </div>
+          <div class="overview-card">
+            <div class="ov-icon coral">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            </div>
+            <div class="ov-label">Services</div>
+            <div class="ov-value" id="ov-services">—</div>
+          </div>
+          <div class="overview-card">
+            <div class="ov-icon emerald">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="ov-label">Testimonials</div>
+            <div class="ov-value" id="ov-testimonials">—</div>
+          </div>
+          <div class="overview-card">
+            <div class="ov-icon coral">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <div class="ov-label">Projects Stat</div>
+            <div class="ov-value" id="ov-stats-projects">—</div>
+          </div>
+        </div>
+
+        <div class="form-card" style="background: linear-gradient(135deg, rgba(16,185,129,.06) 0%, rgba(249,115,22,.06) 100%); border-color: rgba(16,185,129,.2);">
+          <p style="font-size:13.5px; color: var(--text-2); line-height: 1.7;">
+            💡 <strong style="color: var(--text-1)">How it works:</strong> All changes you make here are saved to your browser's <code style="background: var(--surface-3); padding:1px 6px; border-radius:4px; font-size:12px">localStorage</code>. The main website automatically picks them up — just refresh <strong>index.html</strong> after saving.
+            Use <strong>Export JSON</strong> to download a backup. Use <strong>Reset</strong> to restore defaults.
+          </p>
+        </div>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap:12px; margin-top:8px;">
+          <button class="nav-item" data-panel="panel-hero" onclick="navigate('panel-hero')" style="border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Edit Hero Section
+          </button>
+          <button class="nav-item" data-panel="panel-projects" onclick="navigate('panel-projects')" style="border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8L6 7h12l-2-4z"/></svg>
+            Manage Projects
+          </button>
+          <button class="nav-item" data-panel="panel-services" onclick="navigate('panel-services')" style="border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            Manage Services
+          </button>
+          <button class="nav-item" data-panel="panel-contact" onclick="navigate('panel-contact')" style="border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Contact & Links
+          </button>
+        </div>
+      </section>
+
+      <!-- HERO ──────────────────────────────────────────────────────── -->
+      <section class="admin-panel" id="panel-hero">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <h1>Hero Section</h1>
+            <p>Edit the main headline, subtitle, and call-to-action buttons</p>
+          </div>
+        </div>
+
+        <form id="heroForm">
+          <!-- English -->
+          <div class="form-card">
+            <div class="form-card-title">
+              English Content <span class="lang-chip en">EN</span>
+            </div>
+            <div class="form-grid single">
+              <div class="form-group">
+                <label for="hero-en-title">Headline</label>
+                <input type="text" id="hero-en-title" placeholder="We Engineer High-Impact Digital Products">
+              </div>
+              <div class="form-group">
+                <label for="hero-en-subtitle">Subtitle</label>
+                <textarea id="hero-en-subtitle" rows="3" placeholder="A boutique software collective…"></textarea>
+              </div>
+            </div>
+            <div class="form-grid" style="margin-top:14px">
+              <div class="form-group">
+                <label for="hero-en-cta1">Primary CTA Label</label>
+                <input type="text" id="hero-en-cta1" placeholder="Explore Portfolio">
+              </div>
+              <div class="form-group">
+                <label for="hero-en-cta2">Secondary CTA Label</label>
+                <input type="text" id="hero-en-cta2" placeholder="Book Architecture Call">
+              </div>
+            </div>
+          </div>
+
+          <!-- Arabic -->
+          <div class="form-card">
+            <div class="form-card-title">
+              Arabic Content <span class="lang-chip ar">AR</span>
+            </div>
+            <div class="form-grid single">
+              <div class="form-group">
+                <label for="hero-ar-title">العنوان الرئيسي</label>
+                <input type="text" id="hero-ar-title" dir="rtl" placeholder="نهندس منتجات رقمية استثنائية">
+              </div>
+              <div class="form-group">
+                <label for="hero-ar-subtitle">الوصف</label>
+                <textarea id="hero-ar-subtitle" rows="3" dir="rtl" placeholder="استوديو برمجي متطور…"></textarea>
+              </div>
+            </div>
+            <div class="form-grid" style="margin-top:14px">
+              <div class="form-group">
+                <label for="hero-ar-cta1">زر الدعوة الأول</label>
+                <input type="text" id="hero-ar-cta1" dir="rtl" placeholder="استكشف أعمالنا">
+              </div>
+              <div class="form-group">
+                <label for="hero-ar-cta2">زر الدعوة الثاني</label>
+                <input type="text" id="hero-ar-cta2" dir="rtl" placeholder="احجز استشارة هندسية">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Save Hero
+          </button>
+        </form>
+      </section>
+
+      <!-- STATS ─────────────────────────────────────────────────────── -->
+      <section class="admin-panel" id="panel-stats">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <h1>Stats Counters</h1>
+            <p>The 4 animated numbers displayed in the stats section</p>
+          </div>
+        </div>
+
+        <form id="statsForm">
+          <div class="form-card">
+            <div class="form-grid" style="grid-template-columns: 1fr 1fr 1fr 1fr">
+              <div class="form-group">
+                <label for="stat-projects">Projects Delivered</label>
+                <input type="number" id="stat-projects" min="0" placeholder="50">
+              </div>
+              <div class="form-group">
+                <label for="stat-years">Years Experience</label>
+                <input type="number" id="stat-years" min="0" placeholder="3">
+              </div>
+              <div class="form-group">
+                <label for="stat-clients">Happy Clients</label>
+                <input type="number" id="stat-clients" min="0" placeholder="20">
+              </div>
+              <div class="form-group">
+                <label for="stat-team">Team Members</label>
+                <input type="number" id="stat-team" min="0" placeholder="15">
+              </div>
+            </div>
+            <p class="text-muted" style="margin-top:12px">A <strong>+</strong> suffix is automatically appended to each number on the site.</p>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Save Stats
+          </button>
+        </form>
+      </section>
+
+      <!-- SERVICES ──────────────────────────────────────────────────── -->
+      <section class="admin-panel" id="panel-services">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <h1>Services</h1>
+            <p>Add, edit or remove service cards shown on the website</p>
+          </div>
+          <div class="panel-header-actions">
+            <button class="btn btn-primary" onclick="openServiceModal(null)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add Service
+            </button>
+          </div>
+        </div>
+
+        <div class="items-list" id="servicesList"></div>
+
+        <button class="add-new-row" onclick="openServiceModal(null)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Add a new service
+        </button>
+      </section>
+
+      <!-- PROJECTS ──────────────────────────────────────────────────── -->
+      <section class="admin-panel" id="panel-projects">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <h1>Portfolio Projects</h1>
+            <p>Manage the case studies shown in the Work section</p>
+          </div>
+          <div class="panel-header-actions">
+            <button class="btn btn-primary" onclick="openProjectModal(null)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add Project
+            </button>
+          </div>
+        </div>
+
+        <div class="items-list" id="projectsList"></div>
+
+        <button class="add-new-row" onclick="openProjectModal(null)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Add a new project
+        </button>
+      </section>
+
+      <!-- TESTIMONIALS ──────────────────────────────────────────────── -->
+      <section class="admin-panel" id="panel-testimonials">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <h1>Testimonials</h1>
+            <p>Client quotes displayed on the main page</p>
+          </div>
+          <div class="panel-header-actions">
+            <button class="btn btn-primary" onclick="openTestimonialModal(null)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add Testimonial
+            </button>
+          </div>
+        </div>
+
+        <div class="items-list" id="testimonialsList"></div>
+
+        <button class="add-new-row" onclick="openTestimonialModal(null)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Add a new testimonial
+        </button>
+      </section>
+
+      <!-- CONTACT & LINKS ───────────────────────────────────────────── -->
+      <section class="admin-panel" id="panel-contact">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <h1>Contact &amp; Social Links</h1>
+            <p>Email, WhatsApp number, and all social media URLs</p>
+          </div>
+        </div>
+
+        <form id="contactForm">
+          <div class="form-card">
+            <div class="form-card-title">Contact Details</div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" placeholder="info@samo.ws">
+              </div>
+              <div class="form-group">
+                <label for="contact-whatsapp">WhatsApp Number <span class="text-muted">(digits only)</span></label>
+                <input type="tel" id="contact-whatsapp" placeholder="01553050260">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="form-card-title">Social Media Links</div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="contact-linkedin">LinkedIn URL</label>
+                <input type="url" id="contact-linkedin" placeholder="https://linkedin.com/company/samo">
+              </div>
+              <div class="form-group">
+                <label for="contact-twitter">X / Twitter URL</label>
+                <input type="url" id="contact-twitter" placeholder="https://x.com/Sam_ui0ux">
+              </div>
+              <div class="form-group">
+                <label for="contact-facebook">Facebook URL</label>
+                <input type="url" id="contact-facebook" placeholder="https://facebook.com/…">
+              </div>
+              <div class="form-group">
+                <label for="contact-instagram">Instagram URL</label>
+                <input type="url" id="contact-instagram" placeholder="https://instagram.com/samo.ws">
+              </div>
+              <div class="form-group">
+                <label for="contact-tiktok">TikTok URL</label>
+                <input type="url" id="contact-tiktok" placeholder="https://tiktok.com/@samo.ws">
+              </div>
+              <div class="form-group">
+                <label for="contact-behance">Behance URL</label>
+                <input type="url" id="contact-behance" placeholder="https://behance.net/samo">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Save Contact Info
+          </button>
+        </form>
+      </section>
+
+    </main><!-- /admin-main -->
+  </div><!-- /admin-shell -->
+
+  <!-- ══════════════ MODALS ══════════════ -->
+
+  <!-- Service Modal -->
+  <div class="modal-overlay" id="serviceModal">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-title">Service</span>
+        <button class="btn btn-ghost btn-icon" onclick="closeModal('serviceModal')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="svcForm">
+        <div class="modal-body">
+
+          <div class="form-group" style="margin-bottom:16px">
+            <label for="svc-icon">Lucide Icon Name</label>
+            <input type="text" id="svc-icon" placeholder="e.g. code-2, smartphone, server, palette…">
+            <span class="text-muted" style="margin-top:4px">Find icons at <a href="https://lucide.dev/icons/" target="_blank" style="color:var(--emerald)">lucide.dev/icons</a></span>
+          </div>
+
+          <div class="lang-tabs">
+            <button type="button" class="lang-tab active" data-lang="en-svc">🇬🇧 English</button>
+            <button type="button" class="lang-tab" data-lang="ar-svc">🇸🇦 Arabic</button>
+          </div>
+
+          <div class="lang-pane active" data-lang="en-svc">
+            <div class="form-grid single">
+              <div class="form-group">
+                <label for="svc-en-title">Title (EN)</label>
+                <input type="text" id="svc-en-title" required placeholder="Web Development">
+              </div>
+              <div class="form-group">
+                <label for="svc-en-desc">Description (EN)</label>
+                <textarea id="svc-en-desc" rows="3" required placeholder="Responsive, fast websites…"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="lang-pane" data-lang="ar-svc">
+            <div class="form-grid single">
+              <div class="form-group">
+                <label for="svc-ar-title">العنوان (AR)</label>
+                <input type="text" id="svc-ar-title" dir="rtl" placeholder="تطوير الويب">
+              </div>
+              <div class="form-group">
+                <label for="svc-ar-desc">الوصف (AR)</label>
+                <textarea id="svc-ar-desc" rows="3" dir="rtl" placeholder="مواقع وتطبيقات ويب سريعة…"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" onclick="closeModal('serviceModal')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Service</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-title">Project</span>
+        <button class="btn btn-ghost btn-icon" onclick="closeModal('projectModal')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="projForm">
+        <div class="modal-body">
+
+          <div class="form-grid" style="margin-bottom:16px">
+            <div class="form-group">
+              <label for="proj-badge">Badge / Category</label>
+              <input type="text" id="proj-badge" required placeholder="Web Development">
+            </div>
+            <div class="form-group">
+              <label for="proj-slug">URL Slug</label>
+              <input type="text" id="proj-slug" required placeholder="my-project-name">
+            </div>
+            <div class="form-group">
+              <label for="proj-color">Accent Color</label>
+              <select id="proj-color">
+                <option value="emerald">Emerald (Green)</option>
+                <option value="coral">Coral (Orange)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="lang-tabs">
+            <button type="button" class="lang-tab active" data-lang="en-proj">🇬🇧 English</button>
+            <button type="button" class="lang-tab" data-lang="ar-proj">🇸🇦 Arabic</button>
+          </div>
+
+          <div class="lang-pane active" data-lang="en-proj">
+            <div class="form-grid single">
+              <div class="form-group">
+                <label for="proj-en-title">Project Title (EN)</label>
+                <input type="text" id="proj-en-title" required placeholder="Elite Royal">
+              </div>
+              <div class="form-group">
+                <label for="proj-en-problem">Problem Statement (EN)</label>
+                <textarea id="proj-en-problem" rows="2" placeholder="Describe the client's challenge…"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="proj-en-result">Result / Solution (EN)</label>
+                <textarea id="proj-en-result" rows="2" placeholder="How SAMO solved it…"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="lang-pane" data-lang="ar-proj">
+            <div class="form-grid single">
+              <div class="form-group">
+                <label for="proj-ar-title">اسم المشروع (AR)</label>
+                <input type="text" id="proj-ar-title" dir="rtl" placeholder="إيليت رويال">
+              </div>
+              <div class="form-group">
+                <label for="proj-ar-problem">المشكلة (AR)</label>
+                <textarea id="proj-ar-problem" rows="2" dir="rtl" placeholder="وصف تحدي العميل…"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="proj-ar-result">النتيجة (AR)</label>
+                <textarea id="proj-ar-result" rows="2" dir="rtl" placeholder="كيف حلت سامو المشكلة…"></textarea>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" onclick="closeModal('projectModal')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Testimonial Modal -->
+  <div class="modal-overlay" id="testimonialModal">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-title">Testimonial</span>
+        <button class="btn btn-ghost btn-icon" onclick="closeModal('testimonialModal')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <form id="testiForm">
+        <div class="modal-body">
+
+          <div class="form-group" style="margin-bottom:16px">
+            <label for="testi-color">Accent Color</label>
+            <select id="testi-color">
+              <option value="emerald">Emerald (Green)</option>
+              <option value="coral">Coral (Orange)</option>
+            </select>
+          </div>
+
+          <div class="lang-tabs">
+            <button type="button" class="lang-tab active" data-lang="en-testi">🇬🇧 English</button>
+            <button type="button" class="lang-tab" data-lang="ar-testi">🇸🇦 Arabic</button>
+          </div>
+
+          <div class="lang-pane active" data-lang="en-testi">
+            <div class="form-grid single">
+              <div class="form-group">
+                <label for="testi-en-quote">Quote (EN)</label>
+                <textarea id="testi-en-quote" rows="3" required placeholder='"SAMO built something amazing…"'></textarea>
+              </div>
+              <div class="form-group">
+                <label for="testi-en-role">Name / Role (EN)</label>
+                <input type="text" id="testi-en-role" required placeholder="CTO, FintechScale">
+              </div>
+            </div>
+          </div>
+
+          <div class="lang-pane" data-lang="ar-testi">
+            <div class="form-grid single">
+              <div class="form-group">
+                <label for="testi-ar-quote">الاقتباس (AR)</label>
+                <textarea id="testi-ar-quote" rows="3" dir="rtl" placeholder='"سامو بنت شيئاً رائعاً…"'></textarea>
+              </div>
+              <div class="form-group">
+                <label for="testi-ar-role">الاسم / الدور (AR)</label>
+                <input type="text" id="testi-ar-role" dir="rtl" placeholder="المدير التقني، FintechScale">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" onclick="closeModal('testimonialModal')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Testimonial</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ── Toast ───────────────────────────────────────────────────────── -->
+  <div id="toast" role="alert">
+    <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toastMsg"></span>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+
+</html>

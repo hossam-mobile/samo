@@ -1,3 +1,21 @@
+/* ==========================================================================
+   Dashboard content override — reads saved content from localStorage
+   set by admin.html and merges it into translations before first render.
+   ========================================================================== */
+(function applySavedContent() {
+  try {
+    const raw = localStorage.getItem('samo_content');
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+
+    // We'll patch translations after the object is declared — see bottom of
+    // this IIFE which runs after the const is hoisted via a deferred call.
+    window.__samoSavedContent = saved;
+  } catch (e) {
+    // Silently fail so the site always works
+  }
+})();
+
 const translations = {
   en: {
     nav: { home: 'Home', about: 'About', services: 'Services', work: 'Work', contact: 'Contact', cta: 'Book a Call' },
@@ -114,6 +132,116 @@ const translations = {
     footer: { tagline: 'فريق تطوير برمجيات يحول الأفكار إلى منتجات موثوقة وقابلة للتوسع.', nav_title: 'تصفح', contact_title: 'اتصل بنا', rights: 'جميع الحقوق محفوظة.' }
   }
 };
+
+/* ── Merge saved dashboard content into translations ─────────────────── */
+(function mergeSavedContent() {
+  const saved = window.__samoSavedContent;
+  if (!saved) return;
+
+  // Hero
+  if (saved.hero) {
+    ['en', 'ar'].forEach(lang => {
+      if (!saved.hero[lang]) return;
+      const h = saved.hero[lang];
+      if (h.title)    translations[lang].hero.title    = h.title;
+      if (h.subtitle) translations[lang].hero.subtitle = h.subtitle;
+      if (h.cta1)     translations[lang].hero.cta1     = h.cta1 + ' <i data-lucide="arrow-right"></i>';
+      if (h.cta2)     translations[lang].hero.cta2     = '<i data-lucide="calendar"></i> ' + h.cta2;
+    });
+  }
+
+  // Stats
+  if (saved.stats) {
+    const s = saved.stats;
+    document.addEventListener('DOMContentLoaded', () => {
+      if (s.projects !== undefined) {
+        const el = document.querySelector('.stat-number[data-count]');
+        if (el) {
+          const allStats = document.querySelectorAll('.stat-number[data-count]');
+          const vals = [s.projects, s.years, s.clients, s.team];
+          allStats.forEach((stat, i) => {
+            if (vals[i] !== undefined) {
+              stat.dataset.count = vals[i];
+              stat.textContent = vals[i] + '+';
+            }
+          });
+        }
+      }
+    });
+  }
+
+  // Services (EN + AR text)
+  if (saved.services && saved.services.length) {
+    saved.services.forEach((svc, i) => {
+      const key = ['web', 'mobile', 'backend', 'design', 'consulting', 'devops'][i];
+      if (!key) return;
+      if (svc.en) {
+        translations.en.services[key + '_title'] = svc.en.title;
+        translations.en.services[key + '_text']  = svc.en.desc;
+      }
+      if (svc.ar) {
+        translations.ar.services[key + '_title'] = svc.ar.title;
+        translations.ar.services[key + '_text']  = svc.ar.desc;
+      }
+    });
+  }
+
+  // Projects (EN + AR text)
+  if (saved.projects && saved.projects.length) {
+    saved.projects.forEach((proj, i) => {
+      const n = i + 1;
+      if (proj.en) {
+        translations.en.work['project' + n + '_title']   = proj.en.title;
+        translations.en.work['project' + n + '_problem'] = proj.en.problem;
+        translations.en.work['project' + n + '_result']  = proj.en.result;
+        translations.en.work['project' + n + '_badge']   = proj.badge || '';
+      }
+      if (proj.ar) {
+        translations.ar.work['project' + n + '_title']   = proj.ar.title;
+        translations.ar.work['project' + n + '_problem'] = proj.ar.problem;
+        translations.ar.work['project' + n + '_result']  = proj.ar.result;
+        translations.ar.work['project' + n + '_badge']   = proj.badge || '';
+      }
+    });
+  }
+
+  // Testimonials
+  if (saved.testimonials && saved.testimonials.length) {
+    saved.testimonials.forEach((t, i) => {
+      const n = i + 1;
+      if (t.en) {
+        translations.en.testimonials['quote' + n] = t.en.quote;
+        translations.en.testimonials['role'  + n] = t.en.role;
+      }
+      if (t.ar) {
+        translations.ar.testimonials['quote' + n] = t.ar.quote;
+        translations.ar.testimonials['role'  + n] = t.ar.role;
+      }
+    });
+  }
+
+  // Contact email / whatsapp links
+  if (saved.contact) {
+    const c = saved.contact;
+    document.addEventListener('DOMContentLoaded', () => {
+      if (c.email) {
+        document.querySelectorAll('a[href^="mailto:"]').forEach(a => { a.href = 'mailto:' + c.email; a.textContent = c.email; });
+      }
+      if (c.whatsapp) {
+        const waMsg = encodeURIComponent("Hi SAMO! I'd like to discuss a project.");
+        const waUrl = `https://wa.me/${c.whatsapp}?text=${waMsg}`;
+        document.querySelectorAll('a[href*="wa.me"]').forEach(a => { a.href = waUrl; });
+      }
+      // Social links
+      const socials = { linkedin: 'a[aria-label="LinkedIn"]', twitter: 'a[aria-label="X / Twitter"]',
+                        facebook: 'a[aria-label="Facebook"]', instagram: 'a[aria-label="Instagram"]',
+                        tiktok: 'a[aria-label="TikTok"]', behance: '.social-behance' };
+      Object.entries(socials).forEach(([key, sel]) => {
+        if (c[key]) document.querySelectorAll(sel).forEach(a => { a.href = c[key]; });
+      });
+    });
+  }
+})();
 
 let currentLang = 'en';
 
@@ -376,87 +504,4 @@ if (showcaseWindow && window.innerWidth > 991) {
   }
 }
 
-// 3D Grid Card Zoom & Scale Physics on Scroll & Mouse Hover
-function init3DCardStack() {
-  const stackCards = document.querySelectorAll('.stack-card');
-  const workContainer = document.getElementById('workStack');
-  if (!stackCards.length || !workContainer) return;
 
-  function update3DGridScroll() {
-    const viewportHeight = window.innerHeight;
-
-    stackCards.forEach((card) => {
-      if (card.dataset.hovering === 'true') return;
-
-      const rect = card.getBoundingClientRect();
-      const cardCenter = rect.top + rect.height / 2;
-      const viewportCenter = viewportHeight * 0.55;
-      
-      const distance = cardCenter - viewportCenter;
-      const maxDistance = viewportHeight * 0.6;
-      const normDist = Math.max(-1, Math.min(1, distance / maxDistance));
-
-      let scale = 1;
-      let rotateX = 0;
-      let translateZ = 0;
-      let opacity = 1;
-
-      if (normDist > 0) {
-        // Below center (scrolling down to view): Zooms in from depth
-        scale = 1.05 - normDist * 0.22; // Scale from 0.83 up to 1.05
-        rotateX = normDist * 16;        // 3D tilt 16deg
-        translateZ = -normDist * 180;   // Depth back -180px
-        opacity = 1 - normDist * 0.45;  // Fade from 0.55 to 1.0
-      } else {
-        // Above center (scrolling past): Subtle stack depth receding
-        const p = Math.abs(normDist);
-        scale = 1.05 - p * 0.12;
-        rotateX = -p * 8;
-        translateZ = -p * 80;
-        opacity = 1 - p * 0.35;
-      }
-
-      card.style.transform = `perspective(1200px) translateZ(${translateZ}px) rotateX(${rotateX}deg) scale(${scale})`;
-      card.style.opacity = Math.max(0.35, opacity).toFixed(2);
-    });
-  }
-
-  // Mouse hover 3D tilt tracking
-  stackCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      card.dataset.hovering = 'true';
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      const tiltX = (y / (rect.height / 2)) * -9;
-      const tiltY = (x / (rect.width / 2)) * 9;
-      card.style.transform = `perspective(1200px) scale(1.06) translateZ(40px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-      card.style.opacity = '1';
-      card.style.zIndex = '10';
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.dataset.hovering = 'false';
-      card.style.zIndex = '1';
-      update3DGridScroll();
-    });
-  });
-
-  let ticking = false;
-  function onScroll() {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        update3DGridScroll();
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', update3DGridScroll, { passive: true });
-
-  update3DGridScroll();
-}
-
-init3DCardStack();
