@@ -7,61 +7,34 @@
 
 /* ── Default content (mirrors script.js translations) ──────────────────── */
 const DEFAULTS = {
-  stats: { projects: 50, years: 3, clients: 20, team: 15 },
+  stats: { years: 3, specialists: 2, domains: 5, products: 10 },
   hero: {
     en: {
-      title: 'We Engineer <span class="gradient-text-emerald">High-Impact</span> <span class="gradient-text-coral">Digital Products</span> — Right The First Time',
-      subtitle: 'A boutique software collective crafting mission-critical platforms, web applications, and mobile experiences for ambitious leaders worldwide.',
-      cta1: 'Explore Portfolio',
-      cta2: 'Book Architecture Call'
+      title: 'We Engineer High-Impact Digital Products — Right The First Time',
+      subtitle: 'A specialized software development team crafting mobile products and digital experiences with real production experience.',
+      cta1: 'Start a Project',
+      cta2: 'Our Experience'
     },
     ar: {
-      title: 'نهندس منتجات <span class="gradient-text-emerald">رقمية</span> <span class="gradient-text-coral">استثنائية</span> — من المرة الأولى',
-      subtitle: 'استوديو برمجي متطور يبني منصات حيوية، تطبيقات ويب وجوال فائقة السرعة والقابلية للتوسع للشركات والطموحين.',
-      cta1: 'استكشف أعمالنا',
-      cta2: 'احجز استشارة هندسية'
+      title: 'نهندس منتجات رقمية استثنائية — من المرة الأولى',
+      subtitle: 'فريق تطوير برمجيات متخصص يبني منتجات جوال وتجارب رقمية بخبرة إنتاج حقيقية.',
+      cta1: 'ابدأ مشروعك',
+      cta2: 'خبراتنا'
     }
   },
   services: [
-    { id: 's1', icon: 'code-2',     en: { title: 'Web Development',  desc: 'Responsive, fast websites and web apps built with modern frameworks.' },
-                                     ar: { title: 'تطوير الويب',       desc: 'مواقع وتطبيقات ويب سريعة ومتجاوبة مبنية بأحدث الأطر العمل.' } },
-    { id: 's2', icon: 'smartphone', en: { title: 'Mobile Apps',       desc: 'Cross-platform mobile applications that feel native on every device.' },
-                                     ar: { title: 'تطبيقات الجوال',    desc: 'تطبيقات جوال عبر المنصات تشعر بأنها أصلية على كل جهاز.' } },
-    { id: 's3', icon: 'server',     en: { title: 'Backend & APIs',    desc: 'Robust APIs, microservices, and serverless architecture at any scale.' },
-                                     ar: { title: 'الخلفيات وواجهات API', desc: 'واجهات API قوية وخدمات مصغرة وهندسة لامركزية بأي نطاق.' } },
-    { id: 's4', icon: 'palette',    en: { title: 'UI/UX Design',      desc: 'Clean interfaces and user experiences backed by research and testing.' },
-                                     ar: { title: 'تصميم UI/UX',       desc: 'واجهات نظيفة وتجارب مستخدم مدعومة بالبحث والاختبار.' } },
-    { id: 's5', icon: 'lightbulb',  en: { title: 'Consulting',        desc: 'Technical strategy, architecture reviews, and team augmentation.' },
-                                     ar: { title: 'الاستشارات',         desc: 'استراتيجية تقنية ومراجعة البنية التحتية وتوسيع الفريق.' } },
-    { id: 's6', icon: 'git-branch', en: { title: 'DevOps',            desc: 'CI/CD pipelines, cloud infrastructure, and deployment automation.' },
-                                     ar: { title: 'العمليات التقنية',   desc: 'خطوط CI/CD والبنية التحتية السحابية وأتمتة النشر.' } }
-  ],
-  projects: [
-    { id: 'p1', slug: 'elite-royal',       badge: 'Backend Development', color: 'coral',
-      en: { title: 'Elite Royal',    problem: 'Pickup, processing, and delivery were coordinated manually across branches, causing delays and little visibility into order status.',
-                                     result:  'Automated the full order lifecycle with n8n workflows — scheduling, processing, and courier dispatch — replacing manual coordination.' },
-      ar: { title: 'إيليت رويال',   problem: 'كانت عمليات الاستلام والمعالجة والتسليم تُنسق يدويًا بين الفروع، مما تسبب في تأخيرات.',
-                                     result:  'أتمتة دورة حياة الطلب بالكامل عبر سير عمل n8n — من الجدولة إلى التجهيز وتوزيع السائقين.' } },
-    { id: 'p2', slug: 'sanay3ya-baladna', badge: 'Web Development', color: 'emerald',
-      en: { title: 'Sanay3ya Baladna', problem: 'Customers had no reliable way to find and book trusted local craftsmen.',
-                                        result:  'Built a full-stack marketplace with verified profiles, instant booking, and real-time chat.' },
-      ar: { title: 'صنايعية بلدنا',    problem: 'لم يكن لدى العملاء طريقة موثوقة للعثور على حرفيين محليين وحجزهم.',
-                                        result:  'بناء منصة متكاملة مع ملفات موثقة وحجز فوري ومحادثة لحظية.' } },
-    { id: 'p3', slug: 'ham-ham',          badge: 'Full Stack', color: 'coral',
-      en: { title: 'Ham Ham', problem: 'Orders were handled over the phone, so status updates and coordination across branches always lagged.',
-                               result:  'Engineered a real-time ordering system with live order tracking and consistent menu and pricing.' },
-      ar: { title: 'هم هم',  problem: 'كانت الطلبات تُدار عبر الهاتف، لذا كانت تحديثات الحالة متأخرة.',
-                               result:  'هندسة نظام طلبات لحظي مع تتبع مباشر للطلبات وقوائم وأسعار موحدة.' } },
-    { id: 'p4', slug: '4aura',            badge: 'Web Development', color: 'emerald',
-      en: { title: '4AURA', problem: 'The practice needed a fast, elegant web presence that non-technical staff could update.',
-                             result:  'Delivered a high-performance corporate site powered by a custom CMS for events and media.' },
-      ar: { title: 'فور أورا', problem: 'احتاجت الشركة إلى حضور إلكتروني سريع وأنيق يمكن تحديثه دون مساعدة هندسية.',
-                                result:  'تسليم موقع مؤسسي عالي الأداء مدعوم بنظام محتوى مخصص.' } },
-    { id: 'p5', slug: 'extra-pharma',     badge: 'Backend Development', color: 'coral',
-      en: { title: 'Extra Pharma', problem: 'Matching thousands of clinician profiles to facility shifts was slow.',
-                                    result:  'Optimized queries to return relevant matches in milliseconds and streamlined shift scheduling.' },
-      ar: { title: 'إكسترا فارما', problem: 'كانت مطابقة آلاف ملفات الأطباء مع مناوبات المنشآت بطيئة.',
-                                    result:  'تحسين الاستعلامات لتُعيد النتائج المطابقة خلال أجزاء من الثانية.' } }
+    { id: 's1', icon: 'search',     en: { title: 'Product Discovery', desc: 'Define the right product before writing a single line of code. We help clarify goals, users, and scope.' },
+                                     ar: { title: 'اكتشاف المنتج',     desc: 'تحديد المنتج الصحيح قبل كتابة أي سطر كود. نساعد في توضيح الأهداف والمستخدمين والنطاق.' } },
+    { id: 's2', icon: 'palette',    en: { title: 'UI/UX Design',       desc: 'Research-backed interfaces and experiences that are intuitive, clean, and aligned with your business goals.' },
+                                     ar: { title: 'تصميم UI/UX',        desc: 'واجهات وتجارب مستخدم مدعومة بالبحث، بديهية ونظيفة ومتوافقة مع أهداف عملك.' } },
+    { id: 's3', icon: 'smartphone', en: { title: 'Mobile App Development', desc: 'Cross-platform mobile applications built for performance, reliability, and a native feel on every device.' },
+                                     ar: { title: 'تطوير تطبيقات الجوال', desc: 'تطبيقات جوال عبر المنصات مبنية للأداء والموثوقية والأحساس الأصلي على كل جهاز.' } },
+    { id: 's4', icon: 'rocket',     en: { title: 'MVP Development',    desc: 'Go from idea to a working product quickly. We build lean, validated MVPs ready for real users.' },
+                                     ar: { title: 'تطوير MVP',          desc: 'الانتقال من فكرة إلى منتج يعمل بسرعة. نبني MVPs خفيفة وم验证ة وجاهزة للمستخدمين.' } },
+    { id: 's5', icon: 'server',     en: { title: 'API & Backend Integration', desc: 'Robust APIs, third-party integrations, and backend systems that power your product at any scale.' },
+                                     ar: { title: 'تكامل API والخلفيات', desc: 'واجهات API قوية وتكاملات طرف ثالث وأنظمة خلفية تدعم منتجك بأي نطاق.' } },
+    { id: 's6', icon: 'refresh-cw', en: { title: 'Product Iteration & Maintenance', desc: 'Continuous improvement, bug fixes, and feature updates to keep your product evolving with your business.' },
+                                     ar: { title: 'تحسين المنتج والصيانة', desc: 'تحسين مستمر وإصلاح أخطاء وتحديث ميزات لإبقاء منتجك يتطور مع أعمالك.' } }
   ],
   testimonials: [
     { id: 't1', color: 'emerald',
@@ -181,9 +154,7 @@ document.querySelectorAll('.lang-tab').forEach(tab => {
    ══════════════════════════════════════════════════════════════════════════ */
 function renderOverview() {
   document.getElementById('ov-services').textContent = content.services.length;
-  document.getElementById('ov-projects').textContent = content.projects.length;
   document.getElementById('ov-testimonials').textContent = content.testimonials.length;
-  document.getElementById('ov-stats-projects').textContent = content.stats.projects + '+';
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -219,18 +190,18 @@ document.getElementById('heroForm').addEventListener('submit', e => {
    STATS
    ══════════════════════════════════════════════════════════════════════════ */
 function loadStatsForm() {
-  document.getElementById('stat-projects').value = content.stats.projects;
-  document.getElementById('stat-years').value    = content.stats.years;
-  document.getElementById('stat-clients').value  = content.stats.clients;
-  document.getElementById('stat-team').value     = content.stats.team;
+  document.getElementById('stat-years').value      = content.stats.years;
+  document.getElementById('stat-specialists').value = content.stats.specialists;
+  document.getElementById('stat-domains').value     = content.stats.domains;
+  document.getElementById('stat-products').value    = content.stats.products;
 }
 
 document.getElementById('statsForm').addEventListener('submit', e => {
   e.preventDefault();
-  content.stats.projects = parseInt(document.getElementById('stat-projects').value) || 0;
-  content.stats.years    = parseInt(document.getElementById('stat-years').value) || 0;
-  content.stats.clients  = parseInt(document.getElementById('stat-clients').value) || 0;
-  content.stats.team     = parseInt(document.getElementById('stat-team').value) || 0;
+  content.stats.years      = parseInt(document.getElementById('stat-years').value) || 0;
+  content.stats.specialists = parseInt(document.getElementById('stat-specialists').value) || 0;
+  content.stats.domains     = parseInt(document.getElementById('stat-domains').value) || 0;
+  content.stats.products    = parseInt(document.getElementById('stat-products').value) || 0;
   saveContent(content);
   renderOverview();
   showToast('Stats saved!');
@@ -324,107 +295,6 @@ function deleteService(id) {
   renderServices();
   renderOverview();
   showToast('Service deleted.', 'error');
-}
-
-/* ══════════════════════════════════════════════════════════════════════════
-   PROJECTS
-   ══════════════════════════════════════════════════════════════════════════ */
-let editingProjectId = null;
-
-function renderProjects() {
-  const list = document.getElementById('projectsList');
-  list.innerHTML = '';
-  if (!content.projects.length) {
-    list.innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8L6 7h12l-2-4z"/></svg><p>No projects yet</p></div>';
-    return;
-  }
-  content.projects.forEach((proj) => {
-    const row = document.createElement('div');
-    row.className = 'item-row';
-    row.innerHTML = `
-      <div class="item-row-icon ${proj.color || 'emerald'}">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8L6 7h12l-2-4z"/></svg>
-      </div>
-      <div class="item-row-body">
-        <div class="item-row-title">${proj.en.title} <span class="badge badge-neutral" style="margin-left:6px">${proj.badge}</span></div>
-        <div class="item-row-sub">${proj.ar.title} · /${proj.slug}</div>
-      </div>
-      <div class="item-row-actions">
-        <button class="btn btn-ghost btn-icon btn-sm" title="Edit" onclick="openProjectModal('${proj.id}')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-        </button>
-        <button class="btn btn-danger btn-icon btn-sm" title="Delete" onclick="deleteProject('${proj.id}')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
-        </button>
-      </div>`;
-    list.appendChild(row);
-  });
-}
-
-function openProjectModal(id) {
-  editingProjectId = id || null;
-  const modal = document.getElementById('projectModal');
-  modal.querySelector('.modal-title').textContent = id ? 'Edit Project' : 'Add Project';
-
-  modal.querySelectorAll('.lang-tab').forEach((t, i) => t.classList.toggle('active', i === 0));
-  modal.querySelectorAll('.lang-pane').forEach((p, i) => p.classList.toggle('active', i === 0));
-
-  if (id) {
-    const proj = content.projects.find(p => p.id === id);
-    if (!proj) return;
-    document.getElementById('proj-en-title').value   = proj.en.title;
-    document.getElementById('proj-en-problem').value = proj.en.problem;
-    document.getElementById('proj-en-result').value  = proj.en.result;
-    document.getElementById('proj-ar-title').value   = proj.ar.title;
-    document.getElementById('proj-ar-problem').value = proj.ar.problem;
-    document.getElementById('proj-ar-result').value  = proj.ar.result;
-    document.getElementById('proj-badge').value  = proj.badge;
-    document.getElementById('proj-slug').value   = proj.slug;
-    document.getElementById('proj-color').value  = proj.color || 'emerald';
-  } else {
-    document.getElementById('projForm').reset();
-  }
-  openModal('projectModal');
-}
-
-document.getElementById('projForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const entry = {
-    id:    editingProjectId || ('p' + Date.now()),
-    slug:  document.getElementById('proj-slug').value.trim() || 'project',
-    badge: document.getElementById('proj-badge').value.trim(),
-    color: document.getElementById('proj-color').value,
-    en: {
-      title:   document.getElementById('proj-en-title').value,
-      problem: document.getElementById('proj-en-problem').value,
-      result:  document.getElementById('proj-en-result').value
-    },
-    ar: {
-      title:   document.getElementById('proj-ar-title').value,
-      problem: document.getElementById('proj-ar-problem').value,
-      result:  document.getElementById('proj-ar-result').value
-    }
-  };
-  if (editingProjectId) {
-    const idx = content.projects.findIndex(p => p.id === editingProjectId);
-    if (idx !== -1) content.projects[idx] = entry;
-  } else {
-    content.projects.push(entry);
-  }
-  saveContent(content);
-  renderProjects();
-  renderOverview();
-  closeModal('projectModal');
-  showToast(editingProjectId ? 'Project updated!' : 'Project added!');
-});
-
-function deleteProject(id) {
-  if (!confirm('Delete this project?')) return;
-  content.projects = content.projects.filter(p => p.id !== id);
-  saveContent(content);
-  renderProjects();
-  renderOverview();
-  showToast('Project deleted.', 'error');
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -580,7 +450,6 @@ function initAll() {
   loadHeroForm();
   loadStatsForm();
   renderServices();
-  renderProjects();
   renderTestimonials();
   loadContactForm();
 }

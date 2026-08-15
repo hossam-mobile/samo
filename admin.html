@@ -69,11 +69,6 @@
         Services
       </button>
 
-      <button class="nav-item" data-panel="panel-projects">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8L6 7h12l-2-4z"/></svg>
-        Projects
-      </button>
-
       <button class="nav-item" data-panel="panel-testimonials">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         Testimonials
@@ -101,13 +96,6 @@
 
         <div class="overview-grid">
           <div class="overview-card">
-            <div class="ov-icon emerald">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8L6 7h12l-2-4z"/></svg>
-            </div>
-            <div class="ov-label">Projects</div>
-            <div class="ov-value" id="ov-projects">—</div>
-          </div>
-          <div class="overview-card">
             <div class="ov-icon coral">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
             </div>
@@ -120,13 +108,6 @@
             </div>
             <div class="ov-label">Testimonials</div>
             <div class="ov-value" id="ov-testimonials">—</div>
-          </div>
-          <div class="overview-card">
-            <div class="ov-icon coral">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-            </div>
-            <div class="ov-label">Projects Stat</div>
-            <div class="ov-value" id="ov-stats-projects">—</div>
           </div>
         </div>
 
@@ -141,10 +122,6 @@
           <button class="nav-item" data-panel="panel-hero" onclick="navigate('panel-hero')" style="border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             Edit Hero Section
-          </button>
-          <button class="nav-item" data-panel="panel-projects" onclick="navigate('panel-projects')" style="border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8L6 7h12l-2-4z"/></svg>
-            Manage Projects
           </button>
           <button class="nav-item" data-panel="panel-services" onclick="navigate('panel-services')" style="border:1px solid var(--border); border-radius:var(--radius); padding:16px;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
@@ -241,20 +218,20 @@
           <div class="form-card">
             <div class="form-grid" style="grid-template-columns: 1fr 1fr 1fr 1fr">
               <div class="form-group">
-                <label for="stat-projects">Projects Delivered</label>
-                <input type="number" id="stat-projects" min="0" placeholder="50">
-              </div>
-              <div class="form-group">
                 <label for="stat-years">Years Experience</label>
                 <input type="number" id="stat-years" min="0" placeholder="3">
               </div>
               <div class="form-group">
-                <label for="stat-clients">Happy Clients</label>
-                <input type="number" id="stat-clients" min="0" placeholder="20">
+                <label for="stat-specialists">Specialists</label>
+                <input type="number" id="stat-specialists" min="0" placeholder="2">
               </div>
               <div class="form-group">
-                <label for="stat-team">Team Members</label>
-                <input type="number" id="stat-team" min="0" placeholder="15">
+                <label for="stat-domains">Domains Experienced</label>
+                <input type="number" id="stat-domains" min="0" placeholder="5">
+              </div>
+              <div class="form-group">
+                <label for="stat-products">Products Shipped</label>
+                <input type="number" id="stat-products" min="0" placeholder="10">
               </div>
             </div>
             <p class="text-muted" style="margin-top:12px">A <strong>+</strong> suffix is automatically appended to each number on the site.</p>
@@ -286,29 +263,6 @@
         <button class="add-new-row" onclick="openServiceModal(null)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           Add a new service
-        </button>
-      </section>
-
-      <!-- PROJECTS ──────────────────────────────────────────────────── -->
-      <section class="admin-panel" id="panel-projects">
-        <div class="panel-header">
-          <div class="panel-header-left">
-            <h1>Portfolio Projects</h1>
-            <p>Manage the case studies shown in the Work section</p>
-          </div>
-          <div class="panel-header-actions">
-            <button class="btn btn-primary" onclick="openProjectModal(null)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              Add Project
-            </button>
-          </div>
-        </div>
-
-        <div class="items-list" id="projectsList"></div>
-
-        <button class="add-new-row" onclick="openProjectModal(null)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          Add a new project
         </button>
       </section>
 
@@ -453,84 +407,6 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-ghost" onclick="closeModal('serviceModal')">Cancel</button>
           <button type="submit" class="btn btn-primary">Save Service</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Project Modal -->
-  <div class="modal-overlay" id="projectModal">
-    <div class="modal">
-      <div class="modal-header">
-        <span class="modal-title">Project</span>
-        <button class="btn btn-ghost btn-icon" onclick="closeModal('projectModal')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-      </div>
-      <form id="projForm">
-        <div class="modal-body">
-
-          <div class="form-grid" style="margin-bottom:16px">
-            <div class="form-group">
-              <label for="proj-badge">Badge / Category</label>
-              <input type="text" id="proj-badge" required placeholder="Web Development">
-            </div>
-            <div class="form-group">
-              <label for="proj-slug">URL Slug</label>
-              <input type="text" id="proj-slug" required placeholder="my-project-name">
-            </div>
-            <div class="form-group">
-              <label for="proj-color">Accent Color</label>
-              <select id="proj-color">
-                <option value="emerald">Emerald (Green)</option>
-                <option value="coral">Coral (Orange)</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="lang-tabs">
-            <button type="button" class="lang-tab active" data-lang="en-proj">🇬🇧 English</button>
-            <button type="button" class="lang-tab" data-lang="ar-proj">🇸🇦 Arabic</button>
-          </div>
-
-          <div class="lang-pane active" data-lang="en-proj">
-            <div class="form-grid single">
-              <div class="form-group">
-                <label for="proj-en-title">Project Title (EN)</label>
-                <input type="text" id="proj-en-title" required placeholder="Elite Royal">
-              </div>
-              <div class="form-group">
-                <label for="proj-en-problem">Problem Statement (EN)</label>
-                <textarea id="proj-en-problem" rows="2" placeholder="Describe the client's challenge…"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="proj-en-result">Result / Solution (EN)</label>
-                <textarea id="proj-en-result" rows="2" placeholder="How SAMO solved it…"></textarea>
-              </div>
-            </div>
-          </div>
-
-          <div class="lang-pane" data-lang="ar-proj">
-            <div class="form-grid single">
-              <div class="form-group">
-                <label for="proj-ar-title">اسم المشروع (AR)</label>
-                <input type="text" id="proj-ar-title" dir="rtl" placeholder="إيليت رويال">
-              </div>
-              <div class="form-group">
-                <label for="proj-ar-problem">المشكلة (AR)</label>
-                <textarea id="proj-ar-problem" rows="2" dir="rtl" placeholder="وصف تحدي العميل…"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="proj-ar-result">النتيجة (AR)</label>
-                <textarea id="proj-ar-result" rows="2" dir="rtl" placeholder="كيف حلت سامو المشكلة…"></textarea>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-ghost" onclick="closeModal('projectModal')">Cancel</button>
-          <button type="submit" class="btn btn-primary">Save Project</button>
         </div>
       </form>
     </div>
