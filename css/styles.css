@@ -1720,7 +1720,7 @@ section+section {
 .section-title {
   font-size: 2.2rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--secondary);
   text-align: center;
   margin-bottom: 12px;
   letter-spacing: -0.5px;
@@ -1760,7 +1760,7 @@ section+section {
 
 .about-card h3 {
   font-size: 1.1rem;
-  color: var(--secondary);
+  color: var(--accent);
   margin-bottom: 12px;
 }
 
@@ -1806,7 +1806,7 @@ section+section {
 
 .process-step h3 {
   font-size: 1.05rem;
-  color: var(--secondary);
+  color: var(--accent);
   margin-bottom: 8px;
 }
 
@@ -1858,7 +1858,7 @@ section+section {
 
 .service-card h3 {
   font-size: 1.1rem;
-  color: var(--secondary);
+  color: var(--accent);
   margin-bottom: 10px;
 }
 
@@ -1934,13 +1934,13 @@ section+section {
 
 .experience-card h3 {
   font-size: 1rem;
-  color: var(--text);
+  color: var(--accent);
   margin-bottom: 8px;
 }
 
 .experience-card p {
   font-size: 0.88rem;
-  color: var(--text-muted);
+  color: var(--text);
   line-height: 1.6;
 }
 
