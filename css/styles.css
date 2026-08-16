@@ -855,8 +855,8 @@ h4 {
   box-shadow: 0 12px 30px rgba(207, 117, 90, 0.18);
 }
 
-/* Trust Strip */
-.hero-trust-strip {
+/* Why SAMO Section */
+.why-samo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1621,23 +1621,16 @@ h4 {
     width: 100%;
     justify-content: center;
   }
-  .floating-glass-card {
-    display: none; /* Hide floating badges on narrow mobile to prevent overlap */
-  }
-  .tech-matrix-grid, .solutions-grid {
+  .why-samo-grid,
+  .what-we-bring-grid {
     grid-template-columns: 1fr;
   }
-  .showcase-header {
-    flex-direction: column;
-    align-items: flex-start;
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
-  .showcase-tabs {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .showcase-tab {
-    padding: 6px 10px;
-    font-size: 0.75rem;
+  .tech-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -1645,8 +1638,11 @@ h4 {
   .hero-title {
     font-size: 2.1rem;
   }
-  .code-content {
-    font-size: 0.76rem;
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+  .final-cta-content h2 {
+    font-size: 2rem;
   }
 }
 
@@ -1738,35 +1734,58 @@ section+section {
   background: var(--bg-section);
 }
 
-.about-grid {
+.about-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-lead {
+  font-size: 1.15rem;
+  color: var(--text);
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.about-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .about-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 32px;
+  padding: 28px;
   transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .about-card:hover {
   border-color: var(--secondary-border);
-  transform: translateY(-6px);
-  box-shadow: 0 20px 48px #D8D5BF;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px #D8D5BF;
 }
 
 .about-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--accent);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .about-card p {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
 /* Process */
@@ -2601,11 +2620,14 @@ section+section {
 
 /* RTL overrides */
 [dir="rtl"] .stats-grid,
-[dir="rtl"] .about-grid,
+[dir="rtl"] .about-layout,
 [dir="rtl"] .services-grid,
 [dir="rtl"] .experience-grid,
 [dir="rtl"] .testimonials-grid,
-[dir="rtl"] .process-steps {
+[dir="rtl"] .process-steps,
+[dir="rtl"] .why-samo-grid,
+[dir="rtl"] .what-we-bring-grid,
+[dir="rtl"] .tech-grid {
   direction: rtl;
 }
 
@@ -2626,7 +2648,9 @@ section+section {
 .about-card p,
 .process-step p,
 .service-card p,
-.testimonial-text {
+.testimonial-text,
+.why-samo-card p,
+.what-we-bring-card p {
   color: #73827B;
 }
 
@@ -2705,10 +2729,22 @@ section+section {
     gap: 32px;
   }
 
-  .about-grid,
+  .about-layout,
   .services-grid,
   .testimonials-grid {
     grid-template-columns: 1fr;
+  }
+
+  .why-samo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .what-we-bring-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .process-steps {
@@ -2815,6 +2851,225 @@ section+section {
 
 .process-step:nth-child(4) {
   transition-delay: 0.35s;
+}
+
+/* Why SAMO Section */
+.why-samo {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.why-samo-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.why-samo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.why-samo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px 28px;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.why-samo-card:hover {
+  border-color: var(--secondary-border);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px #D8D5BF;
+}
+
+.why-samo-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  border-radius: 14px;
+}
+
+.why-samo-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.why-samo-icon.emerald {
+  background: rgba(57, 108, 84, 0.09);
+  color: var(--accent);
+}
+
+.why-samo-icon.coral {
+  background: rgba(207, 117, 90, 0.09);
+  color: var(--secondary);
+}
+
+.why-samo-card h3 {
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.why-samo-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* What We Bring Section */
+.what-we-bring {
+  padding: 80px 0;
+  background: var(--bg-section);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.what-we-bring-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.what-we-bring-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px 28px;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.what-we-bring-card:hover {
+  border-color: var(--secondary-border);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px #D8D5BF;
+}
+
+.what-we-bring-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--secondary);
+  font-family: 'Century Gothic', sans-serif;
+  opacity: 0.25;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.what-we-bring-card h3 {
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.what-we-bring-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* Technology Section */
+.technology {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.tech-category {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 24px;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.tech-category:hover {
+  border-color: var(--secondary-border);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px #D8D5BF;
+}
+
+.tech-category h3 {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Final CTA Section */
+.final-cta {
+  padding: 100px 0;
+  background: var(--accent);
+  text-align: center;
+}
+
+.final-cta-content h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  font-family: 'Century Gothic', 'Clash Display', sans-serif;
+}
+
+.final-cta-content p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+}
+
+.final-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.final-cta .btn-primary-glow {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E8F5EE 100%);
+  color: var(--accent) !important;
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.2);
+}
+
+.final-cta .btn-primary-glow:hover {
+  box-shadow: 0 16px 40px -4px rgba(0, 0, 0, 0.3);
+}
+
+.final-cta .btn-outline-glass {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.final-cta .btn-outline-glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #FFFFFF !important;
 }
 
 /* ============ Project Details Page ============ */

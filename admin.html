@@ -69,11 +69,6 @@
         Services
       </button>
 
-      <button class="nav-item" data-panel="panel-testimonials">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Testimonials
-      </button>
-
       <div class="sidebar-section-label">Settings</div>
 
       <button class="nav-item" data-panel="panel-contact">
@@ -101,13 +96,6 @@
             </div>
             <div class="ov-label">Services</div>
             <div class="ov-value" id="ov-services">—</div>
-          </div>
-          <div class="overview-card">
-            <div class="ov-icon emerald">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </div>
-            <div class="ov-label">Testimonials</div>
-            <div class="ov-value" id="ov-testimonials">—</div>
           </div>
         </div>
 
@@ -266,29 +254,6 @@
         </button>
       </section>
 
-      <!-- TESTIMONIALS ──────────────────────────────────────────────── -->
-      <section class="admin-panel" id="panel-testimonials">
-        <div class="panel-header">
-          <div class="panel-header-left">
-            <h1>Testimonials</h1>
-            <p>Client quotes displayed on the main page</p>
-          </div>
-          <div class="panel-header-actions">
-            <button class="btn btn-primary" onclick="openTestimonialModal(null)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              Add Testimonial
-            </button>
-          </div>
-        </div>
-
-        <div class="items-list" id="testimonialsList"></div>
-
-        <button class="add-new-row" onclick="openTestimonialModal(null)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          Add a new testimonial
-        </button>
-      </section>
-
       <!-- CONTACT & LINKS ───────────────────────────────────────────── -->
       <section class="admin-panel" id="panel-contact">
         <div class="panel-header">
@@ -407,66 +372,6 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-ghost" onclick="closeModal('serviceModal')">Cancel</button>
           <button type="submit" class="btn btn-primary">Save Service</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Testimonial Modal -->
-  <div class="modal-overlay" id="testimonialModal">
-    <div class="modal">
-      <div class="modal-header">
-        <span class="modal-title">Testimonial</span>
-        <button class="btn btn-ghost btn-icon" onclick="closeModal('testimonialModal')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-      </div>
-      <form id="testiForm">
-        <div class="modal-body">
-
-          <div class="form-group" style="margin-bottom:16px">
-            <label for="testi-color">Accent Color</label>
-            <select id="testi-color">
-              <option value="emerald">Emerald (Green)</option>
-              <option value="coral">Coral (Orange)</option>
-            </select>
-          </div>
-
-          <div class="lang-tabs">
-            <button type="button" class="lang-tab active" data-lang="en-testi">🇬🇧 English</button>
-            <button type="button" class="lang-tab" data-lang="ar-testi">🇸🇦 Arabic</button>
-          </div>
-
-          <div class="lang-pane active" data-lang="en-testi">
-            <div class="form-grid single">
-              <div class="form-group">
-                <label for="testi-en-quote">Quote (EN)</label>
-                <textarea id="testi-en-quote" rows="3" required placeholder='"SAMO built something amazing…"'></textarea>
-              </div>
-              <div class="form-group">
-                <label for="testi-en-role">Name / Role (EN)</label>
-                <input type="text" id="testi-en-role" required placeholder="CTO, FintechScale">
-              </div>
-            </div>
-          </div>
-
-          <div class="lang-pane" data-lang="ar-testi">
-            <div class="form-grid single">
-              <div class="form-group">
-                <label for="testi-ar-quote">الاقتباس (AR)</label>
-                <textarea id="testi-ar-quote" rows="3" dir="rtl" placeholder='"سامو بنت شيئاً رائعاً…"'></textarea>
-              </div>
-              <div class="form-group">
-                <label for="testi-ar-role">الاسم / الدور (AR)</label>
-                <input type="text" id="testi-ar-role" dir="rtl" placeholder="المدير التقني، FintechScale">
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-ghost" onclick="closeModal('testimonialModal')">Cancel</button>
-          <button type="submit" class="btn btn-primary">Save Testimonial</button>
         </div>
       </form>
     </div>
