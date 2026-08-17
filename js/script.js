@@ -15,7 +15,7 @@ const translations = {
   en: {
     nav: { home: 'Home', about: 'About', services: 'Services', experience: 'Experience', contact: 'Contact', cta: 'Book a Call' },
     hero: {
-      eyebrow: 'SAMO; Software Development Studio',
+      eyebrow: 'SAMO — Software Development Studio',
       title: 'We Turn Ideas Into <span class="gradient-text-emerald">Software That Works</span>',
       subtitle: 'A small, focused team helping businesses and founders design, build, and launch digital products — with the experience to get it right.',
       cta1: 'Book a Free 30-Min Consultation <i data-lucide="arrow-right"></i>',
