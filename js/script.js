@@ -8,14 +8,14 @@
     if (!raw) return;
     const saved = JSON.parse(raw);
     window.__samoSavedContent = saved;
-  } catch (e) {}
+  } catch (e) { }
 })();
 
 const translations = {
   en: {
     nav: { home: 'Home', about: 'About', services: 'Services', experience: 'Experience', contact: 'Contact', cta: 'Book a Call' },
     hero: {
-      eyebrow: 'SAMO &bull; Software Development Studio',
+      eyebrow: 'SAMO; Software Development Studio',
       title: 'We Turn Ideas Into <span class="gradient-text-emerald">Software That Works</span>',
       subtitle: 'A small, focused team helping businesses and founders design, build, and launch digital products — with the experience to get it right.',
       cta1: 'Book a Free 30-Min Consultation <i data-lucide="arrow-right"></i>',
@@ -291,10 +291,10 @@ const translations = {
     ['en', 'ar'].forEach(lang => {
       if (!saved.hero[lang]) return;
       const h = saved.hero[lang];
-      if (h.title)    translations[lang].hero.title    = h.title;
+      if (h.title) translations[lang].hero.title = h.title;
       if (h.subtitle) translations[lang].hero.subtitle = h.subtitle;
-      if (h.cta1)     translations[lang].hero.cta1     = h.cta1 + ' <i data-lucide="arrow-right"></i>';
-      if (h.cta2)     translations[lang].hero.cta2     = '<i data-lucide="calendar"></i> ' + h.cta2;
+      if (h.cta1) translations[lang].hero.cta1 = h.cta1 + ' <i data-lucide="arrow-right"></i>';
+      if (h.cta2) translations[lang].hero.cta2 = '<i data-lucide="calendar"></i> ' + h.cta2;
     });
   }
 
@@ -318,11 +318,11 @@ const translations = {
       if (!key) return;
       if (svc.en) {
         translations.en.services[key + '_title'] = svc.en.title;
-        translations.en.services[key + '_text']  = svc.en.desc;
+        translations.en.services[key + '_text'] = svc.en.desc;
       }
       if (svc.ar) {
         translations.ar.services[key + '_title'] = svc.ar.title;
-        translations.ar.services[key + '_text']  = svc.ar.desc;
+        translations.ar.services[key + '_text'] = svc.ar.desc;
       }
     });
   }
@@ -338,9 +338,11 @@ const translations = {
         const waUrl = `https://wa.me/${c.whatsapp}?text=${waMsg}`;
         document.querySelectorAll('a[href*="wa.me"]').forEach(a => { a.href = waUrl; });
       }
-      const socials = { linkedin: 'a[aria-label="LinkedIn"]', twitter: 'a[aria-label="X / Twitter"]',
-                        facebook: 'a[aria-label="Facebook"]', instagram: 'a[aria-label="Instagram"]',
-                        tiktok: 'a[aria-label="TikTok"]', behance: '.social-behance' };
+      const socials = {
+        linkedin: 'a[aria-label="LinkedIn"]', twitter: 'a[aria-label="X / Twitter"]',
+        facebook: 'a[aria-label="Facebook"]', instagram: 'a[aria-label="Instagram"]',
+        tiktok: 'a[aria-label="TikTok"]', behance: '.social-behance'
+      };
       Object.entries(socials).forEach(([key, sel]) => {
         if (c[key]) document.querySelectorAll(sel).forEach(a => { a.href = c[key]; });
       });
