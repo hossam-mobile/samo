@@ -36,6 +36,7 @@ const translations = {
     stats: { years: 'Years Experience', specialists: 'Specialists', domains: 'Domains Experienced', products: 'Products Shipped' },
     about: {
       title: 'About Us',
+      story_subtitle: 'Our story & team',
       lead: 'SAMO is a software development studio founded by two specialists who believe great products come from small teams that care.',
       paragraph1: 'We\'re a Mobile Developer and a UI/UX Designer. Between us, we\'ve contributed to production products across e-commerce, delivery, healthcare, education, and business management — through roles at other companies and teams.',
       paragraph2: 'We started SAMO to work directly with businesses and founders who need a reliable technical partner — someone who asks the right questions, builds with care, and delivers something that actually works.',
@@ -47,6 +48,7 @@ const translations = {
     process: {
       title: 'How We Work',
       subtitle: 'A clear, structured process from discovery to launch — designed to keep you involved and confident at every step.',
+      workflow_subtitle: '5-step delivery workflow',
       step1_title: 'Discover',
       step1_text: 'We learn your business, your users, and the problem you\'re solving — so we build the right thing.',
       step2_title: 'Design',
@@ -91,6 +93,7 @@ const translations = {
     experience: {
       title: 'Our Experience',
       subtitle: 'Experience that comes from building real products.',
+      domains_subtitle: 'Domains & capabilities',
       intro: 'Our team has contributed to production products across multiple domains. This experience was gained through previous professional engagements at other companies and teams — not through our current business directly.',
       domain1_title: 'E-commerce & Marketplaces',
       domain1_text: 'Online stores, multi-vendor platforms, and product catalog systems.',
@@ -167,6 +170,7 @@ const translations = {
     stats: { years: 'سنوات خبرة', specialists: 'متخصصون', domains: 'مجالات خبرة', products: 'منتجات مُسلّمة' },
     about: {
       title: 'من نحن',
+      story_subtitle: 'قصتنا وفريقنا',
       lead: 'سامو استوديو تطوير برمجيات أسّسه متخصصان يؤمنان بأن المنتجات العظمى تأتي من فرق صغيرة تهتم.',
       paragraph1: 'نحن مطور جوال ومصمم واجهات مستخدم. معاً، ساهمنا في منتجات إنتاجية في التجارة الإلكترونية والتوصيل والرعاية الصحية والتعليم وإدارة الأعمال — من خلال أدوار في شركات وفرق أخرى.',
       paragraph2: 'أطلقنا سامو للعمل مباشرة مع الشركات ورواد الأعمال الذين يحتاجون شريكاً تقنياً موثوقاً — شخصاً يطرح الأسئلة الصحيحة ويبني بعناية ويسلم شيئاً فعلاً يعمل.',
@@ -178,6 +182,7 @@ const translations = {
     process: {
       title: 'كيف نعمل',
       subtitle: 'عملية واضحة ومنظمة من الاكتشاف إلى الإطلاق — مصممة لإبقائك مشاركاً وواثقاً في كل خطوة.',
+      workflow_subtitle: 'عملية تسليم من 5 خطوات',
       step1_title: 'الاكتشاف',
       step1_text: 'نفهم عملك ومستخدمين والمشكلة التي تحلها — لنبني الشيء الصحيح.',
       step2_title: 'التصميم',
@@ -222,6 +227,7 @@ const translations = {
     experience: {
       title: 'خبراتنا',
       subtitle: 'خبرة تأتي من بناء منتجات حقيقية.',
+      domains_subtitle: 'المجالات والقدرات',
       intro: 'ساهم فريقنا في منتجات إنتاجية عبر مجالات متعددة. هذه الخبرة اكتُسبت من التزامات مهنية سابقة في شركات وفرق أخرى — وليس من عملنا الحالي مباشرة.',
       domain1_title: 'التجارة الإلكترونية والأسواق',
       domain1_text: 'متاجر إلكترونية ومنصات متعددة البائعين وأنظمة كتالوج المنتجات.',
