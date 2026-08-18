@@ -109,11 +109,6 @@ const translations = {
       domain6_text: 'Multi-step processes, role-based access, and offline-capable mobile apps.',
       note: 'Some of the products our team has contributed to are subject to client confidentiality, contractual agreements, and company policies. For that reason, we don\'t publicly display those projects or their materials. We\'re happy to discuss relevant experience privately when appropriate.'
     },
-    cta: {
-      title: 'Have an Idea? Let\'s Talk.',
-      subtitle: 'Book a free 30-minute consultation. Tell us about your product and we\'ll map out how we can help — no commitment required.',
-      button: 'Book a Free Consultation'
-    },
     technology: {
       title: 'Technology',
       subtitle: 'The tools and technologies we work with to build your product.',
@@ -121,12 +116,6 @@ const translations = {
       backend_title: 'Backend',
       cloud_title: 'Cloud & DevOps',
       design_title: 'Design'
-    },
-    final_cta: {
-      title: 'Ready to Build?',
-      subtitle: 'Whether you have a fully defined product or just a rough idea — we\'re here to help you figure out the next step.',
-      cta1: 'Book a Free Consultation',
-      cta2: 'Explore Our Services'
     },
     contact: {
       title: 'Let\'s Talk',
@@ -243,11 +232,6 @@ const translations = {
       domain6_text: 'عمليات متعددة الخطوات ووصول قائم على الأدوار وتطبيقات جوال قادرة على العمل بدون إنترنت.',
       note: 'بعض المنتجات التي ساهم فيها فريقنا تخضع لسرية العملاء والاتفاقيات التعاقدية وسياسات الشركات. لهذا السبب، لا نعرض تلك المشاريع أو موادها علنًا. يسعدنا مناقشة الخبرة ذات الصلة بشكل خاص عندما يكون ذلك مناسبًا.'
     },
-    cta: {
-      title: 'لديك فكرة؟ لنتحدث.',
-      subtitle: 'احجز استشارة مجانية لمدة 30 دقيقة. أخبرنا عن منتجك وسنحدد كيف يمكننا المساعدة — بدون أي التزام.',
-      button: 'احجز استشارة مجانية'
-    },
     technology: {
       title: 'التقنيات',
       subtitle: 'الأدوات والتقنيات التي نعمل بها لبناء منتجك.',
@@ -255,12 +239,6 @@ const translations = {
       backend_title: 'الخوادم',
       cloud_title: 'السحابة والبنية التحتية',
       design_title: 'التصميم'
-    },
-    final_cta: {
-      title: 'جاهز للبناء؟',
-      subtitle: 'سواء كان لديك منتج مُعرّف بالكامل أو فكرة مبدئية — نحن هنا لمساعدتك في تحديد الخطوة التالية.',
-      cta1: 'احجز استشارة مجانية',
-      cta2: 'استكشف خدماتنا'
     },
     contact: {
       title: 'لنتحدث',
